@@ -23,20 +23,22 @@ body {
 }
 
 
-#info {
-    margin-right: 200px;
-}
-
 
 #info {
     display: flex;
     align-items: center;
     gap: 5rem;
+    margin-right: 150px;
 }
 
 #info a {
     text-decoration: none;
     color: black;
+    transition: 0.4s;
+}
+
+#info a:hover {
+    transform: scale(1.1);
 }
 
 #talk a{
@@ -59,7 +61,7 @@ body {
 }
 
 main {
-    box-shadow: 0 px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 #mid {
@@ -205,6 +207,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 10rem;
+    padding-bottom: 100px;
 }
 
 #cards {
@@ -242,24 +245,67 @@ main {
     transform: scale(1.07);
 }
 
-.hidden {
-    display: none;
+
+footer {
+    font-family: 'Montserrat', sans-serif;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding-bottom: 70px;
+    font-size: 14px;
+}
+
+#backTop {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+#backTop img {
+    width: 15px;
+}
+
+#backTop a {
+    text-decoration: none;
+    color: white;
+}
+
+#iconsFooter {
+    display: flex;
+    gap: 1rem;
+}
+
+footer p {
+    color: white;
+    
 }
 
 
 @media (max-width: 500px) {
-    
-    #header img {
-        margin-left: 0px;
+
+    #header {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
     }
-    
-    
+
+    #header img {
+        width: 60px;
+    }
+
     #info {
         display: flex;
         align-items: center;
         gap: 2rem;
-        margin-right: 10px;
-        font-size: 9px;
+        margin-right: 0px;
+        font-size: 11px;
+        margin-left: 22px;
+        
     }
     
     #talk a {
@@ -279,24 +325,26 @@ main {
         transform: scale(1.07);
     }
     
+    
     main {
-        box-shadow: 1 px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 1 0px 10px rgba(0, 0, 0, 0.2);
     }
     
     #mid {
         font-family: 'Raleway', sans-serif;
         display: flex;
-        gap: 12rem;
+        flex-direction: column;
+        gap: 5rem;
         align-items: center;
         justify-content: center;
-        padding-top: 110px;
+        padding-top: 70px;
         padding-left: 10px;
-        padding-bottom: 150px;
+        padding-bottom: 200px;
         font-size: 20px;
     }
 
     #mid img {
-        width: 200px;
+        width: 300px;
     }
     
     #mid strong {
@@ -306,14 +354,18 @@ main {
     #mid-text {
         display: flex;
         flex-direction: column;
-        gap: 3rem;
+        gap: 2rem;
     }
     
+    #firstText {
+       text-align: center;
+    }
+
     #secondText {
         display: flex;
         flex-direction: column;
         gap: .5rem;
-        margin-left: 10px;
+        text-align: center;
     }
     
     #secondText p {
@@ -323,13 +375,13 @@ main {
     #thirdRow {
         display: flex;
         flex-direction: column;
-        gap: 9rem;
+        gap: 3rem;
     }
     
     #icons {
         display: flex;
         gap: 2rem;
-        margin-left: 20px;
+        justify-content: center;
     }
     
     #icons a {
@@ -345,15 +397,16 @@ main {
     
     #aboutMe {
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-        padding-top: 150px;
+        padding-top: 200px;
         padding-bottom: 200px;
-        padding-left: 100px;
+        padding: 50px;
         display: flex;
-        gap: 10rem;
+        flex-direction: column;
+        gap: 5rem;
     }
     
     #aboutMe img {
-        width: 450px;
+        width: 300px;
     }
     
     #aboutText {
@@ -365,7 +418,7 @@ main {
     .title {
         font-family: 'Montserrat', sans-serif;
         font-size: 24px;
-        margin-left: 200px;
+        margin-left: 80px;
     }
     
     .titles {
@@ -390,25 +443,25 @@ main {
         flex-direction: column;
         gap: 7rem;
         margin-top: 100px;
-        margin-left: 300px;
+        margin-left: 0px;
     }
     
     #iconsSkills {
         display: flex;
         flex-direction: column;
-        gap: 10rem;
-        margin-left: 160px;
+        gap: 5rem;
+       margin-left: 100px;
     }
     
     #icons1 i {
-        width: 180px;
-        font-size: 70px;
+        width: 70px;
+        font-size: 50px;
     }
 
 
     #icons2 i {
-        width: 180px;
-        font-size: 70px;
+        width: 70px;
+        font-size: 50px;
     }
     
     #projects {
@@ -421,12 +474,14 @@ main {
     
     #cards {
         display: flex;
+        flex-direction: column;
         gap: 3rem;
         justify-content: center;
+        align-items: center;
     }
     
     #card img {
-        width: 380px;
+        width: 340px;
         border-radius: 16px;
         transition: 0.4s;
     }
@@ -446,7 +501,7 @@ main {
         text-align: center;
         text-decoration: none;
         color: white;
-        margin-left: 620px;
+        margin-left: 130px;
     }
 
     #bMobile {
