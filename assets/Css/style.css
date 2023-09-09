@@ -334,17 +334,18 @@ p {
 
     #header {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
         gap: 3rem;
+        align-items: center;
+        justify-content: center;
     }
 
     #header #info {
-        margin-left: 35px;
+        margin-left: 0px;
     }
 
     #header img {
-        width: 60px;
+        width: 55px;
+        margin-left: 0px;
     }
 
     #info {
@@ -421,6 +422,10 @@ p {
         font-size: 22px;
     }
     
+    #secondText strong {
+        margin-left: 40px;
+    }
+
     #thirdRow {
         display: flex;
         flex-direction: column;
