@@ -54,7 +54,23 @@ body {
 }
 
 
+.container {
+    position: relative;
+}
 
+img#imagem {
+    position: relative;
+    animation: moveUpDown 2s ease-in-out infinite;
+}
+
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px); /* Altere o valor para ajustar a altura do movimento */
+    }
+}
 
 #talk a:hover {
     transform: scale(1.07);
@@ -72,7 +88,7 @@ main {
     justify-content: center;
     padding-top: 130px;
     padding-left: 10px;
-    padding-bottom: 150px;
+    padding-bottom: 235px;
     font-size: 30px;
 }
 
@@ -126,11 +142,16 @@ main {
     padding-bottom: 350px;
     padding-left: 100px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 10rem;
 }
 
 #aboutMe img {
-    width: 650px;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;    
+    border: 1px solid black;
 }
 
 #aboutText {
@@ -220,6 +241,7 @@ main {
     width: 450px;
     border-radius: 16px;
     transition: 0.4s;
+    border: 1px solid rgb(78, 77, 77);
 }
 
 #card img:hover {
@@ -286,12 +308,39 @@ footer p {
 }
 
 
+#content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    line-height: 1.6;
+    font-size: 18px;
+    text-align: justify;
+}
+
+@media screen and (max-width: 768px) {
+    p {
+        font-size: 16px;
+    }
+}
+
 @media (max-width: 500px) {
+    
 
     #header {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         gap: 3rem;
+    }
+
+    #header #info {
+        margin-left: 50px;
     }
 
     #header img {
@@ -402,12 +451,16 @@ footer p {
         padding: 50px;
         display: flex;
         flex-direction: column;
-        gap: 5rem;
+        gap: 3rem;
     }
     
     #aboutMe img {
-        width: 300px;
+        width: 160px;
+        height: 160px;
+        border-radius: 100%;    
+        border: 1px solid black;
     }
+    
     
     #aboutText {
         display: flex;
