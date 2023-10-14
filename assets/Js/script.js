@@ -74,13 +74,15 @@ if(width >= 1400) {
                             <a href="https://gfimpports.vercel.app/home.html" target="_blank"><img src="/assets/Images/gfimpports.png"></a>
                         </div>
                     </div>
-                    <a id="button" href=${github} target="_blank">Ver Mais</a>
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <a id="button" href=${github} target="_blank">Ver Mais</a>
+                    </div>
                 </section>
 
                 <section id="faleComigo">
                         <h1 id="titleTalk">Entre em <span style="color: #0d1cf3">contato</span> comigo</h1>
                         <div style="display: flex; gap: 13rem; justify-content: center;">
-                            <div style="display: flex; flex-direction: column; gap: 2rem">
+                            <div  style="display: flex; flex-direction: column; gap: 2rem">
                                 <div style="display: flex; gap: 1rem">
                                     <button style="background-color: #0d1cf3; padding: 20px; border: 0; border-radius: 5px"><i class="fa-solid fa-phone fa-xl" style="color: #ffffff;"></i></button>
                                     <div style="display: flex; flex-direction: column; gap: .5rem">
@@ -136,7 +138,6 @@ if(width >= 1400) {
                                 />
                             </div>
                         </div>
-                        <strong><p id="copy" style="display: flex; gap: .5rem;  align-items: center; justify-content: center; color: black; margin-top: 100px; font-size: 14px"><i class="fa-solid fa-copyright fa-lg" style="color: #0d1cf3;"></i>2023 Matheus Amaral</p></strong>
                         </div>
                 </section>
             </div>`
@@ -212,12 +213,14 @@ else if (width > 900 && width <= 1400) {
                             <a href="https://gfimpports.vercel.app/home.html" target="_blank"><img src="/assets/Images/gfimpports.png"></a>
                         </div>
                     </div>
-                    <a id="button" href=${github} target="_blank">Ver Mais</a>
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <a id="button" href=${github} target="_blank">Ver Mais</a>
+                    </div>
                 </section>
 
                 <section id="faleComigo">
                         <h1 id="titleTalk">Entre em <span style="color: #0d1cf3">contato</span> comigo</h1>
-                        <div style="display: flex; gap: 13rem; justify-content: center;">
+                        <div style="display: flex; gap: 5rem; justify-content: center;">
                             <div style="display: flex; flex-direction: column; gap: 2rem">
                                 <div style="display: flex; gap: 1rem">
                                     <button style="background-color: #0d1cf3; padding: 20px; border: 0; border-radius: 5px"><i class="fa-solid fa-phone fa-xl" style="color: #ffffff;"></i></button>
@@ -248,14 +251,14 @@ else if (width > 900 && width <= 1400) {
                                         placeholder="Assunto"
                                         required
                                         id="assunto"
-                                        style="padding: 13px; border-radius: 8px; border: 1px solid lightgray; width: 450px"
+                                        style="padding: 13px; border-radius: 8px; border: 1px solid lightgray; width: 310px"
                                     />
                                     <input 
                                         type="email" 
                                         placeholder="E-mail"
                                         required
                                         id="email"
-                                        style="padding: 13px; border-radius: 8px; border: 1px solid lightgray; width: 450px"
+                                        style="padding: 13px; border-radius: 8px; border: 1px solid lightgray; width: 310px"
                                     />
                                 </div>
                                 <input
@@ -270,7 +273,7 @@ else if (width > 900 && width <= 1400) {
                                     value="Enviar mensagem"
                                     id="submit"
                                     onclick="enviar()"
-                                    style="padding: 15px; width: 170px; border: 0; border-radius: 6px; margin-left: 795px; background-color: #0d1cf3; color: white; font-size: 15px"
+                                    style="padding: 15px; width: 170px; border: 0; border-radius: 6px; margin-left: 515px; background-color: #0d1cf3; color: white; font-size: 15px"
                                 />
                             </div>
                         </div>
@@ -285,6 +288,132 @@ else if (width > 500 && width <= 900) {
 }
 
 else {
+    root.innerHTML = `
+    <div id="background">
+            <main>
+                <header id="header">
+                    <div id="buttonMobile">
+                        <i class="fa-solid fa-bars-staggered fa-xl" style="color: #000000;" onclick="mobile()"></i>
+                    </div>
+                    <img id="logo" src="/assets/Images/logo 1.png">
+                    <div id="info">
+                        <div id="dark">
+                            <button onclick="darkMode()" class="button"><i class="fa-regular fa-moon fa-2xl" style="color: #000000;"></i></button>
+                        </div>
+                    </div>
+                </header>
+                    <div id="mid">
+                    <div id="mid-text">
+                            <div id="firstText">
+                                <h3 id="title">Olá, Me chamo</h3>
+                            </div>
+                        
+                            <div id="thirdRow">
+                                <div id="secondText">
+                                    <h1 id="nome">Matheus <span class="trocaCor">Amaral</span></h1>
+                                    <strong><p style="color: #0d1cf3"><span class="animated"></span></p></strong>
+                                </div>
+
+                                <div id="buttons2" style="display: flex; align-itens: center; justify-content: center;gap: 1rem;">
+                                    <a href=${wpp} target="_blank" class="butt">Me contate</a>
+                                    <a href="https://www.canva.com/design/DAFcwM_WAcg/6w015JCe-npnIDy-OVG62A/view?utm_content=DAFcwM_WAcg&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" target="_blank" class="butt2">Ver currículo</a>
+                                </div>
+                
+                                <div id="icons" style="display: flex; align-itens: center; justify-content: center;">
+                                    <a href=${github} target="_blank"><i class="fa-brands fa-github fa-xl" style="color: #0d1cf3;"></i></a>
+                                    <a href=${linkedin} target="_blank"><i class="fa-brands fa-linkedin fa-xl" style="color: #0d1cf3;"></i></a>
+                                </div>
+                            </div>
+                    </div>
+                        <div class="container">
+                            <img src="/assets/Images/logo1.svg" id="imagem">
+                        </div>
+                    </div>
+                </main> 
+                
+                <section id="projects">
+                    <div class="titles">
+                        <strong id="projTitle">Meus <span style="color: #0d1cf3;">Projetos</span></strong>
+                    </div>
+            
+                    <div id="cards">
+                        <div id="card">
+                        <a href="https://rwasuplementos.com" target="_blank"><img src="/assets/Images/Rwa.png"></a>
+                        </div>
+                        <div id="card">
+                            <a href="https://portfolio-fernanda-amaral-nrpn.vercel.app/home.html" target="_blank"><img src="/assets/Images/porfoliomae.png"></a>
+                        </div>
+                        <div id="card">
+                            <a href="https://gfimpports.vercel.app/home.html" target="_blank"><img src="/assets/Images/gfimpports.png"></a>
+                        </div>
+                    </div>
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <a id="button" href=${github} target="_blank">Ver Mais</a>
+                    </div>
+                </section>
+
+                <section id="faleComigo">
+                        <h1 id="titleTalk">Entre em <span style="color: #0d1cf3">contato</span> comigo</h1>
+                        <div style="display: flex; flex-direction: column-reverse; gap: 6rem; justify-content: center; align-itens: center">
+                            <div style="display: flex; flex-direction: column; gap: 2rem; justify-content: center; margin-left: 20px">
+                                <div style="display: flex; gap: 1rem">
+                                    <button style="background-color: #0d1cf3; padding: 20px; border: 0; border-radius: 5px"><i class="fa-solid fa-phone fa-xl" style="color: #ffffff;"></i></button>
+                                    <div style="display: flex; flex-direction: column; gap: .5rem">
+                                        <p style="color: lightgray">Me ligue</p>
+                                        <span id="number"> 31 992661386</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 1rem">
+                                    <button style="background-color: #0d1cf3; padding: 21px; border: 0; border-radius: 5px"><i class="fa-solid fa-at fa-lg" style="color: #ffffff;"></i></button>
+                                    <div style="display: flex; flex-direction: column; gap: .5rem">
+                                        <p style="color: lightgray">E-mail</p>
+                                        <span id="mail" style="font-size: 15px">matheuscamposdoamaral15@gmail.com</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 1rem">
+                                    <button style="background-color: #0d1cf3; padding: 23px; border: 0; border-radius: 5px"><i class="fa-solid fa-location-dot fa-lg" style="color: #ffffff;"></i></button>
+                                    <div style="display: flex; flex-direction: column; gap: .5rem">
+                                        <p style="color: lightgray">Endereço</p>
+                                        <span id="ender">Contagem - MG</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; gap: 1rem">
+                                <div style="display: flex; gap: .5rem; justify-content: center">
+                                    <input 
+                                        type="text" 
+                                        placeholder="Assunto"
+                                        required
+                                        id="assunto"
+                                        style="padding: 13px; border-radius: 8px; border: 1px solid lightgray; width: 150px"
+                                    />
+                                    <input 
+                                        type="email" 
+                                        placeholder="E-mail"
+                                        required
+                                        id="email"
+                                        style="padding: 13px; border-radius: 8px; border: 1px solid lightgray; width: 150px"
+                                    />
+                                </div>
+                                <input
+                                    type="text"
+                                    placeholder="Mensagem"
+                                    required
+                                    id="mensagem"
+                                    style="padding: 13px; border-radius: 8px; border: 1px solid lightgray; height: 130px; width: 340px; margin-left: 10px"
+                                />  
+                                <input 
+                                    type="submit"
+                                    value="Enviar mensagem"
+                                    id="submit"
+                                    onclick="enviar()"
+                                    style="padding: 15px; width: 170px; border: 0; border-radius: 6px; margin-left: 105px; background-color: #0d1cf3; color: white; font-size: 15px"
+                                />
+                            </div>
+                        </div>
+                        </div>
+                </section>
+            </div>`
 
 }
 
@@ -304,7 +433,7 @@ const mail = document.getElementById('mail');
 const ender = document.getElementById('ender');
 const sobre = document.getElementById('sobre');
 const copy = document.getElementById('copy');
-
+const buttonMobile = document.getElementById('buttonMobile');
 
 
 
@@ -325,6 +454,7 @@ function darkMode() {
     ender.style.color = 'blue';
     sobre.style.color = 'white';
     copy.style.color = 'white';
+    buttonMobile.innerHTML = `<i class="fa-solid fa-bars-staggered fa-2xl" style="color: #ffffff;"></i>`
 }
 
 
@@ -374,3 +504,30 @@ function enviar() {
     window.location.href = url;
 }
 
+
+
+function mobile() {
+     background.innerHTML = `  <div id="superior">
+     <div id="superiorTop">
+       <div id="user"><strong>Olá, Visitante</strong></div>
+       <a href=""> <i class="fa-solid fa-xmark fa-xl" style="color: #171616;"></i></a>
+     </div>
+     <div id="low">
+           <div class="mobileCard" style="background-color: #1e1d1d;">
+             <a style="color: #fff;" href="#aboutMe" target="_blank">Sobre</a>
+           </div>
+           <div class="mobileCard" style="background-color: #1e1d1d;">
+             <a style="color: #fff;"  href="#projects" target="_blank">Projetos</a>
+           </div>
+           <div class="mobileCard" style="background-color: #1e1d1d;">
+             <a style="color: #fff;" href="https://www.canva.com/design/DAFcwM_WAcg/6w015JCe-npnIDy-OVG62A/view?utm_content=DAFcwM_WAcg&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">Currículo</a>
+           </div>
+           <div class="mobileCard" style="background-color: #1e1d1d;">
+           <a style="color: #fff;" href="#faleComigo" target="_blank">Fale comigo</a>
+           </div>
+           <div class="mobileCard" style="background-color: #1e1d1d;">
+           <a style="color: #fff;"href="https://api.whatsapp.com/send/?phone=5531997066818&text=ola&type=phone_number&app_absent=0"> Entre em contato conosco</a>
+           </div>
+       </div>
+   </div>`
+}
