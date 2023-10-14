@@ -136,21 +136,10 @@ if(width >= 1400) {
                                 />
                             </div>
                         </div>
-                    </div>
+                        <strong><p id="copy" style="display: flex; gap: .5rem;  align-items: center; justify-content: center; color: black; margin-top: 100px; font-size: 14px"><i class="fa-solid fa-copyright fa-lg" style="color: #0d1cf3;"></i>2023 Matheus Amaral</p></strong>
+                        </div>
                 </section>
-            </div>
-    <footer id="footer">
-        <div id="backTop">
-            <a href="#header"><img src="/assets/Images/ic_baseline-double-arrow.png"></a>
-            <strong><a href="#header">VOLTE PARA O TOPO</a></strong>
-        </div>
-        <div id="iconsFooter">
-            <a href="https://www.instagram.com/uomatheus/"><i class="fa-brands fa-square-instagram fa-2xl" style="color: #0d1cf3;"></i></a>
-            <a href=${linkedin}><i class="fa-brands fa-linkedin fa-2xl" style="color: #0d1cf3;"></i></a>
-            <a href=${github}><i class="fa-brands fa-square-github fa-2xl" style="color: #0d1cf3;"></i></a>
-        </div>     
-       <strong><p style="display: flex; gap: .5rem;  align-items: center; justify-content: center;"><i class="fa-solid fa-copyright fa-lg" style="color: #0d1cf3;"></i>2023 Matheus <span style="color: #0d1cf3">Amaral</span> Copyright</p></strong>
-    </footer>`
+            </div>`
 }
 
 const dark = document.getElementById('dark');
@@ -168,6 +157,7 @@ const number = document.getElementById('number');
 const mail = document.getElementById('mail');
 const ender = document.getElementById('ender');
 const sobre = document.getElementById('sobre');
+const copy = document.getElementById('copy');
 
 
 
@@ -188,6 +178,7 @@ function darkMode() {
     mail.style.color = 'blue';
     ender.style.color = 'blue';
     sobre.style.color = 'white';
+    copy.style.color = 'white';
 }
 
 
@@ -207,6 +198,7 @@ function lightMode() {
     mail.style.color = 'black';
     ender.style.color = 'black';
     sobre.style.color = 'black';
+    copy.style.color = 'black';
 }
 
 document.addEventListener('DOMContentLoaded', () => {
