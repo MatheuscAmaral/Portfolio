@@ -14,7 +14,7 @@ if(width >= 1400) {
                         <strong><a id="about" href="#aboutMe"><p>Sobre</p></a></strong>
                         <strong><a id="proje" href="#projects"><p>Projetos</p></a></strong>
                         <strong><a id="curri" href="https://www.canva.com/design/DAFcwM_WAcg/6w015JCe-npnIDy-OVG62A/view?utm_content=DAFcwM_WAcg&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"><p>Currículo</p></a></strong>
-                        <strong><a id="talka" href=${wpp}>Fale Comigo</a></strong>
+                        <strong><a id="talka" href="#faleComigo">Fale Comigo</a></strong>
                         <div id="dark">
                             <button onclick="darkMode()" class="button"><i class="fa-regular fa-moon fa-xl" style="color: #000000;"></i></button>
                         </div>
@@ -31,7 +31,7 @@ if(width >= 1400) {
                             <div id="thirdRow">
                                 <div id="secondText">
                                     <h1 id="nome">Matheus <span class="trocaCor">Amaral</span></h1>
-                                    <strong><p id="cargo">Front-end Developer</p></strong>
+                                    <strong><p><span class="animated"></span></p></strong>
                                 </div>
 
                                 <div id="buttons2" style="display: flex; align-itens: center; gap: 1rem;">
@@ -50,17 +50,17 @@ if(width >= 1400) {
                         </div>
                     </div>
                 </main>
-                
-            
+
                 <section id="aboutMe">
-                    <img src="/assets/Images/me.jpg" >
-                    
+                    <h1 id="sobre">Sobre <span style="color: #0d1cf3">mim</span></h1>
+                    <div style="margin-top: 100px; display: flex; justify-content: center">
+                         <img src="/assets/Images/me.jpg">
+                    </div>
                 </section>
-            
-            
+                
                 <section id="projects">
                     <div class="titles">
-                        <strong>PROJETOS</strong>
+                        <strong id="projTitle">Meus <span style="color: #0d1cf3;">Projetos</span></strong>
                     </div>
             
                     <div id="cards">
@@ -76,19 +76,80 @@ if(width >= 1400) {
                     </div>
                     <a id="button" href=${github} target="_blank">Ver Mais</a>
                 </section>
-            
-    </div>
-    <footer>
+
+                <section id="faleComigo">
+                        <h1 id="titleTalk">Entre em <span style="color: #0d1cf3">contato</span> comigo</h1>
+                        <div style="display: flex; gap: 13rem; justify-content: center;">
+                            <div style="display: flex; flex-direction: column; gap: 2rem">
+                                <div style="display: flex; gap: 1rem">
+                                    <button style="background-color: #0d1cf3; padding: 20px; border: 0; border-radius: 5px"><i class="fa-solid fa-phone fa-xl" style="color: #ffffff;"></i></button>
+                                    <div style="display: flex; flex-direction: column; gap: .5rem">
+                                        <p style="color: lightgray">Me ligue</p>
+                                        <span id="number"> 31 992661386</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 1rem">
+                                    <button style="background-color: #0d1cf3; padding: 21px; border: 0; border-radius: 5px"><i class="fa-solid fa-at fa-lg" style="color: #ffffff;"></i></button>
+                                    <div style="display: flex; flex-direction: column; gap: .5rem">
+                                        <p style="color: lightgray">E-mail</p>
+                                        <span id="mail">matheuscamposdoamaral15@gmail.com</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 1rem">
+                                    <button style="background-color: #0d1cf3; padding: 23px; border: 0; border-radius: 5px"><i class="fa-solid fa-location-dot fa-lg" style="color: #ffffff;"></i></button>
+                                    <div style="display: flex; flex-direction: column; gap: .5rem">
+                                        <p style="color: lightgray">Endereço</p>
+                                        <span id="ender">Contagem - MG</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; gap: 1rem">
+                                <div style="display: flex; gap: .5rem">
+                                    <input 
+                                        type="text" 
+                                        placeholder="Assunto"
+                                        required
+                                        id="assunto"
+                                        style="padding: 13px; border-radius: 8px; border: 1px solid lightgray; width: 450px"
+                                    />
+                                    <input 
+                                        type="email" 
+                                        placeholder="E-mail"
+                                        required
+                                        id="email"
+                                        style="padding: 13px; border-radius: 8px; border: 1px solid lightgray; width: 450px"
+                                    />
+                                </div>
+                                <input
+                                    type="text"
+                                    placeholder="Mensagem"
+                                    required
+                                    id="mensagem"
+                                    style="padding: 13px; border-radius: 8px; border: 1px solid lightgray; height: 130px"
+                                />
+                                <input 
+                                    type="submit"
+                                    value="Enviar mensagem"
+                                    id="submit"
+                                    onclick="enviar()"
+                                    style="padding: 15px; width: 170px; border: 0; border-radius: 6px; margin-left: 795px; background-color: #0d1cf3; color: white; font-size: 15px"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+    <footer id="footer">
         <div id="backTop">
-            <a href="#header"><img src="/assets/Images/ic_baseline-double-arrow.png" ></a>
+            <a href="#header"><img src="/assets/Images/ic_baseline-double-arrow.png"></a>
             <strong><a href="#header">VOLTE PARA O TOPO</a></strong>
         </div>
         <div id="iconsFooter">
-            <a href="https://www.instagram.com/uomatheus/"><i class="fa-brands fa-square-instagram fa-2xl" style="color: #ffffff;"></i></a>
-            <a href=${linkedin}><i class="fa-brands fa-linkedin fa-2xl" style="color: #ffffff;"></i></a>
-            <a href=${github}><i class="fa-brands fa-square-github fa-2xl" style="color: #ffffff;"></i></a>
-        </div>
-        <p><strong><i class="fa-solid fa-copyright fa-lg" style="color: #ffffff;"></i>2023 Matheus Amaral</strong> Copyright</p>
+            <a href="https://www.instagram.com/uomatheus/"><i class="fa-brands fa-square-instagram fa-2xl" style="color: #0d1cf3;"></i></a>
+            <a href=${linkedin}><i class="fa-brands fa-linkedin fa-2xl" style="color: #0d1cf3;"></i></a>
+            <a href=${github}><i class="fa-brands fa-square-github fa-2xl" style="color: #0d1cf3;"></i></a>
+        </div>     
+       <strong><p style="display: flex; gap: .5rem;  align-items: center; justify-content: center;"><i class="fa-solid fa-copyright fa-lg" style="color: #0d1cf3;"></i>2023 Matheus <span style="color: #0d1cf3">Amaral</span> Copyright</p></strong>
     </footer>`
 }
 
@@ -101,6 +162,14 @@ const curri = document.getElementById('curri');
 const logo = document.getElementById('logo');
 const subtitle = document.getElementById('title');
 const nome = document.getElementById('nome');
+const projTitle = document.getElementById('projTitle');
+const titleTalk = document.getElementById('titleTalk');
+const number = document.getElementById('number');
+const mail = document.getElementById('mail');
+const ender = document.getElementById('ender');
+const sobre = document.getElementById('sobre');
+
+
 
 
 function darkMode() {
@@ -113,7 +182,15 @@ function darkMode() {
     logo.style.color = 'white'
     title.style.color = 'white';
     nome.style.color = 'white';
+    projTitle.style.color = 'white';
+    titleTalk.style.color = 'white';
+    number.style.color = 'blue';
+    mail.style.color = 'blue';
+    ender.style.color = 'blue';
+    sobre.style.color = 'white';
 }
+
+
 
 function lightMode() {
     dark.innerHTML = `<button onclick="darkMode()" class="button"><i class="fa-regular fa-moon fa-xl" style="color: #000000;"></i></button>`;
@@ -124,4 +201,38 @@ function lightMode() {
     curri.style.color = 'black';
     title.style.color = 'black';
     nome.style.color = 'black';
+    projTitle.style.color = 'black';
+    titleTalk.style.color = 'black';
+    number.style.color = 'black';
+    mail.style.color = 'black';
+    ender.style.color = 'black';
+    sobre.style.color = 'black';
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    new TypeIt(".animated", {
+        speed: 200,
+        loop: true
+    })
+    .type('Front-End Developer', [{delay: 900}]).delete(19)
+    .type('Quality Assurance', [{delay: 500}]).delete(17)
+    .type('Support Analyst', [{delay: 500}]).delete(15)
+    
+    .go()
+})
+
+function enviar() {
+    const assunto = encodeURIComponent(document.getElementById('assunto').value);
+    const email = encodeURIComponent(document.getElementById('email').value);
+    const msg = encodeURIComponent(document.getElementById('mensagem').value);
+    const numeroDeTelefone = "5531992661386";
+    const mensagem = `Assunto: ${assunto} %0AEmail: ${email} %0AMensagem: ${msg}`;
+
+
+
+    const url = `https://api.whatsapp.com/send?phone=${numeroDeTelefone}&text=${mensagem}`;
+
+    
+    window.location.href = url;
+}
+

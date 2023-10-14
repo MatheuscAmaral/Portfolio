@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,400&family=Raleway:wght@300;400;500;600;700&family=Roboto:wght@100;300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,400&family=Pixelify+Sans:wght@400;600;700&family=Poppins:wght@300;400;500;700&family=Raleway:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700&display=swap');
 
 
 * {
@@ -8,11 +8,13 @@
 
 body {
     background-color: #ffffff;
+    font-family: 'Roboto', sans-serif;
 }
 
 html {
     scroll-behavior: smooth;
 }
+
 
 #header {
     font-family: 'Montserrat', sans-serif;
@@ -124,9 +126,7 @@ img#imagem {
     transform: scale(1.07);
 }
 
-main {
-    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
-}
+
 
 #mid {
     font-family: 'Raleway', sans-serif;
@@ -190,21 +190,41 @@ main {
 
 #aboutMe {
     box-shadow: 0 0px 1px rgba(0, 0, 0, 0.2);
-    padding-top: 280px;
-    padding-bottom: 350px;
-    padding-left: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding-top: 140px;
+    padding-bottom: 400px;
     gap: 10rem;
+
+}
+
+#aboutMe h1 {
+    font-size: 40px;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    
 }
 
 #aboutMe img {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     border-radius: 100%;    
-    border: 1px solid black;
+    border: 1px solid #0d1cf3;
 }
+
+#faleComigo {
+    box-shadow: 0 0px 1px rgba(0, 0, 0, 0.2);
+    padding-top: 140px;
+    padding-bottom: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+}
+
+#faleComigo h1{
+    font-family: 'Raleway', sans-serif;
+    font-size: 50px; 
+    text-align: center;
+}
+
 
 #aboutText {
     display: flex;
@@ -283,28 +303,6 @@ main {
     padding-bottom: 200px;
 }
 
-#thirdRow p {
-    border-right: 4px solid;
-    width: 16.5ch;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: typing 2s steps(19),
-    blinking 0.5s;
-} 
-
-@keyframes typing {
- from {
-    width: 0; 
-
- }
-}
-
-@keyframes blinking {
-    50% {
-        border-color: transparent;
-    }
-}
-
 
 #cards {
     display: flex;
@@ -316,7 +314,7 @@ main {
     width: 450px;
     border-radius: 16px;
     transition: 0.4s;
-    border: 1px solid rgb(78, 77, 77);
+    border: 1px solid #0d1cf3;
 }
 
 #card img:hover {
@@ -329,7 +327,7 @@ main {
     width: 115px;
     border: none;
     border-radius: 33px;
-    background-color: rgb(0, 0, 0);
+    background-color: #0d1cf3;
     text-align: center;
     text-decoration: none;
     color: white;
@@ -342,10 +340,9 @@ main {
     transform: scale(1.07);
 }
 
-
 footer {
     font-family: 'Montserrat', sans-serif;
-    background-color: black;
+    background-color: #05050a;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -451,10 +448,7 @@ p {
         transform: scale(1.07);
     }
     
-    
-    main {
-        box-shadow: 1 0px 10px rgba(0, 0, 0, 0.2);
-    }
+
     
     #mid {
         font-family: 'Raleway', sans-serif;
@@ -555,7 +549,7 @@ p {
         margin-left: 80px;
     }
     
-    .titles {
+    .titles strong {
         font-family: 'Montserrat', sans-serif;
         font-size: 24px;
         text-align: center;
