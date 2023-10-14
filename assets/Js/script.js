@@ -71,7 +71,7 @@ if(width >= 1400) {
                             <a href="https://portfolio-fernanda-amaral-nrpn.vercel.app/home.html" target="_blank"><img src="/assets/Images/porfoliomae.png"></a>
                         </div>
                         <div id="card">
-                            <a href="https://gfimports.vercel.app/home.html" target="_blank"><img src="/assets/Images/gfimpports.png"></a>
+                            <a href="https://gfimpports.vercel.app/home.html" target="_blank"><img src="/assets/Images/gfimpports.png"></a>
                         </div>
                     </div>
                     <a id="button" href=${github} target="_blank">Ver Mais</a>
@@ -198,7 +198,7 @@ function lightMode() {
     mail.style.color = 'black';
     ender.style.color = 'black';
     sobre.style.color = 'black';
-    copy.style.color = 'black';
+    copy.style.color = 'black ';
 }
 
 document.addEventListener('DOMContentLoaded', () => {
