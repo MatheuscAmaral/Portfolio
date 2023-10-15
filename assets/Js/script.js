@@ -148,7 +148,7 @@ else if (width > 900 && width <= 1400) {
     <div id="background">
             <main>
                 <header id="header">
-                    <img id="logo" src="/assets/Images/logo 1.png">
+                    <img id="logo" style="border 1px solid white" src="/assets/Images/logo 1.png">
                     <div id="info">
                         <strong><a id="about" href="#aboutMe"><p>Sobre</p></a></strong>
                         <strong><a id="proje" href="#projects"><p>Projetos</p></a></strong>
@@ -293,25 +293,25 @@ else {
             <main>
                 <header id="header">
                     <div id="buttonMobile">
-                        <i class="fa-solid fa-bars-staggered fa-xl" style="color: #000000;" onclick="mobile()"></i>
+                        <i class="fa-solid fa-bars-staggered fa-xl" id="mobilee" style="color: rgb(62, 61, 61);" onclick="mobile()"></i>
                     </div>
                     <img id="logo" src="/assets/Images/logo 1.png">
                     <div id="info">
                         <div id="dark">
-                            <button onclick="darkMode()" class="button"><i class="fa-regular fa-moon fa-2xl" style="color: #000000;"></i></button>
+                            <button onclick="darkMode()" class="button"><i class="fa-regular fa-moon fa-2xl" style="color: rgb(62, 61, 61);"></i></button>
                         </div>
                     </div>
                 </header>
                     <div id="mid">
                     <div id="mid-text">
                             <div id="firstText">
-                                <h3 id="title">Olá, Me chamo</h3>
+                                <h3 id="title" style="color: #0d1cf3">Olá, Me chamo</h3>
                             </div>
                         
                             <div id="thirdRow">
                                 <div id="secondText">
-                                    <h1 id="nome">Matheus <span class="trocaCor">Amaral</span></h1>
-                                    <strong><p style="color: #0d1cf3"><span class="animated"></span></p></strong>
+                                    <h1 id="nome" style="color: #0d1cf3">Matheus <span class="trocaCor">Amaral</span></h1>
+                                    <strong><p style="color: gray"><span class="animated"></span></p></strong>
                                 </div>
 
                                 <div id="buttons2" style="display: flex; align-itens: center; justify-content: center;gap: 1rem;">
@@ -333,7 +333,7 @@ else {
                 
                 <section id="projects">
                     <div class="titles">
-                        <strong id="projTitle">Meus <span style="color: #0d1cf3;">Projetos</span></strong>
+                        <strong id="projTitle" style="color: #0d1cf3">Meus <span style="color: #0d1cf3;">Projetos</span></strong>
                     </div>
             
                     <div id="cards">
@@ -353,28 +353,28 @@ else {
                 </section>
 
                 <section id="faleComigo">
-                        <h1 id="titleTalk">Entre em <span style="color: #0d1cf3">contato</span> comigo</h1>
+                        <h1 id="titleTalk" style="color: #0d1cf3">Entre em <span style="color: #0d1cf3">contato</span> comigo</h1>
                         <div style="display: flex; flex-direction: column-reverse; gap: 6rem; justify-content: center; align-itens: center">
                             <div style="display: flex; flex-direction: column; gap: 2rem; justify-content: center; margin-left: 20px">
                                 <div style="display: flex; gap: 1rem">
                                     <button style="background-color: #0d1cf3; padding: 20px; border: 0; border-radius: 5px"><i class="fa-solid fa-phone fa-xl" style="color: #ffffff;"></i></button>
                                     <div style="display: flex; flex-direction: column; gap: .5rem">
                                         <p style="color: lightgray">Me ligue</p>
-                                        <span id="number"> 31 992661386</span>
+                                        <span id="number" style="color: #0d1cf3"> 31 992661386</span>
                                     </div>
                                 </div>
                                 <div style="display: flex; gap: 1rem">
                                     <button style="background-color: #0d1cf3; padding: 21px; border: 0; border-radius: 5px"><i class="fa-solid fa-at fa-lg" style="color: #ffffff;"></i></button>
                                     <div style="display: flex; flex-direction: column; gap: .5rem">
                                         <p style="color: lightgray">E-mail</p>
-                                        <span id="mail" style="font-size: 15px">matheuscamposdoamaral15@gmail.com</span>
+                                        <span id="mail" style="font-size: 15px; color: #0d1cf3">matheuscamposdoamaral15@gmail.com</span>
                                     </div>
                                 </div>
                                 <div style="display: flex; gap: 1rem">
                                     <button style="background-color: #0d1cf3; padding: 23px; border: 0; border-radius: 5px"><i class="fa-solid fa-location-dot fa-lg" style="color: #ffffff;"></i></button>
                                     <div style="display: flex; flex-direction: column; gap: .5rem">
                                         <p style="color: lightgray">Endereço</p>
-                                        <span id="ender">Contagem - MG</span>
+                                        <span id="ender" style="color: #0d1cf3">Contagem - MG</span>
                                     </div>
                                 </div>
                             </div>
@@ -415,31 +415,65 @@ else {
                 </section>
             </div>`
 
-}
+        }
 
-const dark = document.getElementById('dark');
-const background = document.getElementById('background');
-const info = document.getElementById('info');
-const about = document.getElementById('about');
-const proje = document.getElementById('proje');
-const curri = document.getElementById('curri');
-const logo = document.getElementById('logo');
-const subtitle = document.getElementById('title');
-const nome = document.getElementById('nome');
-const projTitle = document.getElementById('projTitle');
-const titleTalk = document.getElementById('titleTalk');
-const number = document.getElementById('number');
-const mail = document.getElementById('mail');
-const ender = document.getElementById('ender');
-const sobre = document.getElementById('sobre');
-const copy = document.getElementById('copy');
-const buttonMobile = document.getElementById('buttonMobile');
+        function mobile() {
+             background.innerHTML = `  
+             <div id="superior" style="background-color: white">
+                <div id="superiorTop" >
+                <div id="user"><strong>Olá, Visitante</strong></div>
+                <a href=""> <i class="fa-solid fa-xmark fa-xl" style="color: #171616;"></i></a>
+                </div>
+                <div id="low">
+                    <div class="mobileCard" style="background-color: #01d;">
+                        <a style="color: #fff;" href="#aboutMe">Sobre</a>
+                    </div>
+                    <div class="mobileCard" style="background-color: #01d;">
+                        <a style="color: #fff;"  href="#projects">Projetos</a>
+                    </div>
+                    <div class="mobileCard" style="background-color: #01d;">
+                        <a style="color: #fff;" href="https://www.canva.com/design/DAFcwM_WAcg/6w015JCe-npnIDy-OVG62A/view?utm_content=DAFcwM_WAcg&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">Currículo</a>
+                    </div>
+                    <div class="mobileCard" style="background-color: #01d;">
+                    <a style="color: #fff;" href="#faleComigo">Fale comigo</a>
+                    </div>
+                    <div class="mobileCard" style="background-color: #01d;">
+                    <a style="color: #fff;"href="https://api.whatsapp.com/send/?phone=5531997066818&text=ola&type=phone_number&app_absent=0"> Entre em contato conosco</a>
+                    </div>
+                </div>
+           </div>`
+        }
+
+    const dark = document.getElementById('dark');
+    const background = document.getElementById('background');
+    const info = document.getElementById('info');
+    const about = document.getElementById('about');
+    const proje = document.getElementById('proje');
+    const curri = document.getElementById('curri');
+    const logo = document.getElementById('logo');
+    const subtitle = document.getElementById('title');
+    const nome = document.getElementById('nome');
+    const projTitle = document.getElementById('projTitle');
+    const titleTalk = document.getElementById('titleTalk');
+    const number = document.getElementById('number');
+    const mail = document.getElementById('mail');
+    const ender = document.getElementById('ender');
+    const sobre = document.getElementById('sobre');
+    const copy = document.getElementById('copy');
+    const superior = document.getElementById('superior');
+    const user = document.getElementById('user');
 
 
 
 function darkMode() {
-    dark.innerHTML = `<button onclick="lightMode()" class="button"><i class="fa-regular fa-sun fa-xl" style="color: #ffffff;" ></i></button>`
-    
+    if (width <= 500) {
+        dark.innerHTML = `<i class="fa-regular fa-sun fa-2xl" style="color: rgb(62, 61, 61);"  onclick="lightMode()"></i>`
+    }
+
+    else {
+        dark.innerHTML = `<i class="fa-regular fa-sun fa-lg" style="color: rgb(62, 61, 61);"  onclick="lightMode()"></i>`
+    }
+   
     background.style.backgroundColor = '#090911';
     about.style.color = 'white';
     proje.style.color = 'white';
@@ -454,14 +488,19 @@ function darkMode() {
     ender.style.color = 'blue';
     sobre.style.color = 'white';
     copy.style.color = 'white';
-    buttonMobile.innerHTML = `<i class="fa-solid fa-bars-staggered fa-2xl" style="color: #ffffff;"></i>`
 }
 
 
 
 function lightMode() {
-    dark.innerHTML = `<button onclick="darkMode()" class="button"><i class="fa-regular fa-moon fa-xl" style="color: #000000;"></i></button>`;
-    
+   if(width <= 500) {
+    dark.innerHTML = `<i class="fa-regular fa-moon fa-2xl" style="color: rgb(62, 61, 61);" onclick="darkMode()"></i>`;
+   }
+
+   else {
+    dark.innerHTML = `<i class="fa-regular fa-moon fa-lg" style="color: rgb(62, 61, 61);" onclick="darkMode()"></i>`;
+   }
+
     background.style.backgroundColor = '#fafafa';
     about.style.color = 'black';
     proje.style.color = 'black';
@@ -505,29 +544,3 @@ function enviar() {
 }
 
 
-
-function mobile() {
-     background.innerHTML = `  <div id="superior">
-     <div id="superiorTop">
-       <div id="user"><strong>Olá, Visitante</strong></div>
-       <a href=""> <i class="fa-solid fa-xmark fa-xl" style="color: #171616;"></i></a>
-     </div>
-     <div id="low">
-           <div class="mobileCard" style="background-color: #1e1d1d;">
-             <a style="color: #fff;" href="#aboutMe" target="_blank">Sobre</a>
-           </div>
-           <div class="mobileCard" style="background-color: #1e1d1d;">
-             <a style="color: #fff;"  href="#projects" target="_blank">Projetos</a>
-           </div>
-           <div class="mobileCard" style="background-color: #1e1d1d;">
-             <a style="color: #fff;" href="https://www.canva.com/design/DAFcwM_WAcg/6w015JCe-npnIDy-OVG62A/view?utm_content=DAFcwM_WAcg&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">Currículo</a>
-           </div>
-           <div class="mobileCard" style="background-color: #1e1d1d;">
-           <a style="color: #fff;" href="#faleComigo" target="_blank">Fale comigo</a>
-           </div>
-           <div class="mobileCard" style="background-color: #1e1d1d;">
-           <a style="color: #fff;"href="https://api.whatsapp.com/send/?phone=5531997066818&text=ola&type=phone_number&app_absent=0"> Entre em contato conosco</a>
-           </div>
-       </div>
-   </div>`
-}
