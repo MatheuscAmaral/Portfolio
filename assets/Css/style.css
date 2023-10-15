@@ -390,11 +390,6 @@ p {
     text-align: justify;
 }
 
-@media screen and (max-width: 768px) {
-    p {
-        font-size: 16px;
-    }
-}
 
 @media (max-width: 500px) {
     
@@ -923,3 +918,13 @@ p {
     }
 
 }
+
+@media (max-width: 900) {
+    #header {
+        font-family: 'Montserrat', sans-serif;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 40px;
+        
+    }  
+ }

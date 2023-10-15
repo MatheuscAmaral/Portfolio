@@ -51,13 +51,6 @@ if(width >= 1400) {
                     </div>
                 </main>
 
-                <section id="aboutMe">
-                    <h1 id="sobre">Sobre <span style="color: #0d1cf3">mim</span></h1>
-                    <div style="margin-top: 100px; display: flex; justify-content: center">
-                         <img src="/assets/Images/me.jpg">
-                    </div>
-                </section>
-                
                 <section id="projects">
                     <div class="titles">
                         <strong id="projTitle">Meus <span style="color: #0d1cf3;">Projetos</span></strong>
@@ -170,7 +163,7 @@ else if (width > 900 && width <= 1400) {
                             <div id="thirdRow">
                                 <div id="secondText">
                                     <h1 id="nome">Matheus <span class="trocaCor">Amaral</span></h1>
-                                    <strong><p><span class="animated"></span></p></strong>
+                                    <strong><p><span class="animated"></span></p></strong>  
                                 </div>
 
                                 <div id="buttons2" style="display: flex; align-itens: center; gap: 1rem;">
@@ -189,13 +182,6 @@ else if (width > 900 && width <= 1400) {
                         </div>
                     </div>
                 </main>
-
-                <section id="aboutMe">
-                    <h1 id="sobre">Sobre <span style="color: #0d1cf3">mim</span></h1>
-                    <div style="margin-top: 100px; display: flex; justify-content: center">
-                         <img src="/assets/Images/me.jpg">
-                    </div>
-                </section>
                 
                 <section id="projects">
                     <div class="titles">
@@ -284,7 +270,135 @@ else if (width > 900 && width <= 1400) {
 }
 
 else if (width > 500 && width <= 900) {
+    root.innerHTML = `
+    <div id="background">
+            <main>
+                <header id="header" style="display: flex; gap: 2rem;">
+                    <img id="logo" style="border 1px solid white" src="/assets/Images/logo 1.png">
+                    <div id="info">
+                        <strong><a id="about" href="#aboutMe"><p>Sobre</p></a></strong>
+                        <strong><a id="proje" href="#projects"><p>Projetos</p></a></strong>
+                        <strong><a id="curri" href="https://www.canva.com/design/DAFcwM_WAcg/6w015JCe-npnIDy-OVG62A/view?utm_content=DAFcwM_WAcg&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"><p>Currículo</p></a></strong>
+                        <strong><a id="talka" href="#faleComigo">Fale Comigo</a></strong>
+                        <div id="dark">
+                            <button onclick="darkMode()" class="button"><i class="fa-regular fa-moon fa-xl" style="color: #000000;"></i></button>
+                        </div>
+                    </div>            
+                </header>
 
+                    <div id="mid" style="display: flex; flex-direction: column; gap: 7rem; margin-top: 60px">
+                    <div id="mid-text" style="display: center; flex-direction: column; align-items: center">
+                            <div id="firstText">
+                                <h4 id="title">Olá, Me chamo</h4>
+                            </div>
+                        
+                            <div id="thirdRow" style="display: flex; flex-diretion: column; gap: 2rem">
+                                <div id="secondText">
+                                    <h1 id="nome">Matheus <span class="trocaCor">Amaral</span></h1>
+                                    <strong><p style="text-align: center"><span class="animated"></span></p></strong>
+                                </div>
+
+                                <div id="buttons2" style="display: flex; align-itens: center; gap: 1rem; justify-content: center">
+                                    <a href=${wpp} target="_blank" class="butt">Me contate</a>
+                                    <a href="https://www.canva.com/design/DAFcwM_WAcg/6w015JCe-npnIDy-OVG62A/view?utm_content=DAFcwM_WAcg&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" target="_blank" class="butt2">Ver currículo</a>
+                                </div>
+                
+                                <div id="icons" style="display: flex; align-itens: center; gap: 1rem; justify-content: center; margin-bottom: 100px">
+                                    <a href=${github} target="_blank"><i class="fa-brands fa-github fa-lg" style="color: #0d1cf3;"></i></a>
+                                    <a href=${linkedin} target="_blank"><i class="fa-brands fa-linkedin fa-lg" style="color: #0d1cf3;"></i></a>
+                                </div>
+                            </>
+                    </div>
+                        <div class="container">
+                            <img src="/assets/Images/logo1.svg" width="420px"  id="imagem">
+                        </div>
+                    </div>
+                </main>
+                
+                <section id="projects">
+                    <div class="titles">
+                        <strong id="projTitle">Meus <span style="color: #0d1cf3;">Projetos</span></strong>
+                    </div>
+            
+                    <div id="cards" style="display: flex; flex-direction: column; gap: 1rem; justify-content: center; align-items: center">
+                        <div id="card">
+                        <a href="https://rwasuplementos.com" target="_blank"><img src="/assets/Images/Rwa.png" style="width: 470px"></a>
+                        </div>
+                        <div id="card">
+                            <a href="https://portfolio-fernanda-amaral-nrpn.vercel.app/home.html" target="_blank"><img style="width: 470px" src="/assets/Images/porfoliomae.png"></a>
+                        </div>
+                        <div id="card">
+                            <a href="https://gfimpports.vercel.app/home.html" target="_blank"><img style="width: 470px" src="/assets/Images/gfimpports.png"></a>
+                        </div>
+                    </div>
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <a id="button" href=${github} style="padding: 26px; font-size: 24px; width: 150px; border-radius: 16px" target="_blank">Ver Mais</a>
+                    </div>
+                </section>
+
+                <section id="faleComigo">
+                        <h1 id="titleTalk">Entre em <span style="color: #0d1cf3">contato</span> comigo</h1>
+                        <div style="display: flex; flex-direction: column; gap: 5rem; justify-content: center; margin-bottom: 130px">
+                            <div style="display: flex; flex-direction: column; gap: 2rem; margin-left: 80px">
+                                <div style="display: flex; gap: 1rem">
+                                    <button style="background-color: #0d1cf3; padding: 20px; border: 0; border-radius: 5px"><i class="fa-solid fa-phone fa-xl" style="color: #ffffff;"></i></button>
+                                    <div style="display: flex; flex-direction: column; gap: .3rem">
+                                        <p style="color: lightgray; font-size: 20px">Me ligue</p>
+                                        <span id="number style="font-size: 20px"> 31 992661386</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 1rem">
+                                    <button style="background-color: #0d1cf3; padding: 21px; border: 0; border-radius: 5px"><i class="fa-solid fa-at fa-lg" style="color: #ffffff;"></i></button>
+                                    <div style="display: flex; flex-direction: column; gap: .3rem">
+                                        <p style="color: lightgray; font-size: 20px">E-mail</p>
+                                        <span id="mail" style="font-size: 20px">matheuscamposdoamaral15@gmail.com</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 1rem">
+                                    <button style="background-color: #0d1cf3; padding: 23px; border: 0; border-radius: 5px"><i class="fa-solid fa-location-dot fa-lg" style="color: #ffffff;"></i></button>
+                                    <div style="display: flex; flex-direction: column; gap: .3rem">
+                                        <p style="color: lightgray; font-size: 20px">Endereço</p>
+                                        <span id="ender" style="font-size: 20px">Contagem - MG</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; gap: 1rem; justify-content: center; align-items: center;">
+                                <div style="display: flex; gap: .5rem">
+                                    <input 
+                                        type="text" 
+                                        placeholder="Assunto"
+                                        required
+                                        id="assunto"
+                                        style="padding: 13px; border-radius: 8px; border: 1px solid lightgray; width: 310px"
+                                    />
+                                    <input 
+                                        type="email" 
+                                        placeholder="E-mail"
+                                        required
+                                        id="email"
+                                        style="padding: 13px; border-radius: 8px; border: 1px solid lightgray; width: 310px"
+                                    />
+                                </div>
+                                <input
+                                    type="text"
+                                    placeholder="Mensagem"
+                                    required
+                                    id="mensagem"
+                                    style="padding: 13px; border-radius: 8px; border: 1px solid lightgray; height: 130px; width: 660px"
+                                />
+                                <input 
+                                    type="submit"
+                                    value="Enviar mensagem"
+                                    id="submit"
+                                    onclick="enviar()"
+                                    style="padding: 15px; width: 170px; border: 0; border-radius: 6px; margin-left: 515px; background-color: #0d1cf3; color: white; font-size: 15px"
+                                />
+                            </div>
+                        </div>
+                        <strong><p id="copy" style="display: flex; gap: .5rem;  align-items: center; justify-content: center; color: black; margin-top: 100px; font-size: 14px"><i class="fa-solid fa-copyright fa-lg" style="color: #0d1cf3;"></i>2023 Matheus Amaral</p></strong>
+                        </div>
+                </section>
+            </div>`
 }
 
 else {
