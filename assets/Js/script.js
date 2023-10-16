@@ -74,7 +74,7 @@ if(width >= 1400) {
 
                 <section id="faleComigo">
                         <h1 id="titleTalk">Entre em <span style="color: #0d1cf3">contato</span> comigo</h1>
-                        <div style="display: flex; gap: 13rem; justify-content: center;">
+                        <div style="display: flex; gap: 13rem; justify-content: center; margin-bottom: 50px">
                             <div  style="display: flex; flex-direction: column; gap: 2rem">
                                 <div style="display: flex; gap: 1rem">
                                     <button style="background-color: #0d1cf3; padding: 20px; border: 0; border-radius: 5px"><i class="fa-solid fa-phone fa-xl" style="color: #ffffff;"></i></button>
@@ -131,6 +131,7 @@ if(width >= 1400) {
                                 />
                             </div>
                         </div>
+                        <strong><p id="copy" style="display: flex; gap: .5rem;  align-items: center; justify-content: center; color: black; margin-top: 100px; font-size: 14px"><i class="fa-solid fa-copyright fa-lg" style="color: #0d1cf3;"></i>2023 Matheus Amaral</p></strong>
                         </div>
                 </section>
             </div>`
