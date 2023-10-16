@@ -407,13 +407,13 @@ else {
     <div id="background">
             <main>
                 <header id="header">
-                    <div id="buttonMobile">
-                        <i class="fa-solid fa-bars-staggered fa-xl" id="mobilee" style="color: rgb(62, 61, 61);" onclick="mobile()"></i>
+                    <div>
+                        <i id="buttonMobile" class="fa-solid fa-bars-staggered fa-xl"  style="color: black;" onclick="mobile()"></i>
                     </div>
                     <img id="logo" src="/assets/Images/logo 1.png">
                     <div id="info">
                         <div id="dark">
-                            <button onclick="darkMode()" class="button"><i class="fa-regular fa-moon fa-2xl" style="color: rgb(62, 61, 61);"></i></button>
+                            <button onclick="darkMode()" class="button"><i class="fa-regular fa-moon fa-2xl" style="color: black;"></i></button>
                         </div>
                     </div>
                 </header>
@@ -536,27 +536,19 @@ else {
              background.innerHTML = `  
              <div id="superior" style="background-color: white">
                 <div id="superiorTop" >
-                <div id="user"><strong>Olá, Visitante</strong></div>
-                <a href=""> <i class="fa-solid fa-xmark fa-xl" style="color: #171616;"></i></a>
-                </div>
-                <div id="low">
-                    <div class="mobileCard" style="background-color: #01d;">
-                        <a style="color: #fff;" href="#aboutMe">Sobre</a>
+                    <div id="user"><strong>Olá, Visitante</strong></div>
+                        <a href=""> <i class="fa-solid fa-xmark fa-xl" style="color: #171616;"></i></a>
                     </div>
-                    <div class="mobileCard" style="background-color: #01d;">
-                        <a style="color: #fff;"  href="#projects">Projetos</a>
-                    </div>
-                    <div class="mobileCard" style="background-color: #01d;">
-                        <a style="color: #fff;" href="https://www.canva.com/design/DAFcwM_WAcg/6w015JCe-npnIDy-OVG62A/view?utm_content=DAFcwM_WAcg&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">Currículo</a>
-                    </div>
-                    <div class="mobileCard" style="background-color: #01d;">
-                    <a style="color: #fff;" href="#faleComigo">Fale comigo</a>
-                    </div>
-                    <div class="mobileCard" style="background-color: #01d;">
-                    <a style="color: #fff;"href="https://api.whatsapp.com/send/?phone=5531997066818&text=ola&type=phone_number&app_absent=0"> Entre em contato conosco</a>
+                    <div id="low">
+                        <div class="mobileCard" style="background-color: #01d;">
+                            <a style="color: #fff;" href="https://www.canva.com/design/DAFcwM_WAcg/6w015JCe-npnIDy-OVG62A/view?utm_content=DAFcwM_WAcg&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">Currículo</a>
+                        </div>
+                        <div class="mobileCard" style="background-color: #01d;">
+                            <a style="color: #fff;"href="https://api.whatsapp.com/send/?phone=5531997066818&text=ola&type=phone_number&app_absent=0"> Entre em contato conosco</a>
+                        </div>
                     </div>
                 </div>
-           </div>`
+            </div>`
         }
 
     const dark = document.getElementById('dark');
@@ -577,23 +569,26 @@ else {
     const copy = document.getElementById('copy');
     const superior = document.getElementById('superior');
     const user = document.getElementById('user');
+    const Bmobile = document.getElementById('buttonMobile');
 
 
 
 function darkMode() {
     if (width <= 500) {
-        dark.innerHTML = `<i class="fa-regular fa-sun fa-2xl" style="color: rgb(62, 61, 61);"  onclick="lightMode()"></i>`
+        dark.innerHTML = `<i class="fa-regular fa-sun fa-2xl" style="color: white;"  onclick="lightMode()"></i>`
     }
-
+    
     else {
-        dark.innerHTML = `<i class="fa-regular fa-sun fa-lg" style="color: rgb(62, 61, 61);"  onclick="lightMode()"></i>`
+        dark.innerHTML = `<i class="fa-regular fa-sun fa-lg" style="color: white;"  onclick="lightMode()"></i>`
     }
-   
+    
+    Bmobile.style.color = 'white';
     background.style.backgroundColor = '#090911';
+    copy.style.color = 'white';
     about.style.color = 'white';
     proje.style.color = 'white';
     curri.style.color = 'white';
-    logo.style.color = 'white'
+    logo.style.color = 'white';
     title.style.color = 'white';
     nome.style.color = 'white';
     projTitle.style.color = 'white';
@@ -602,20 +597,20 @@ function darkMode() {
     mail.style.color = 'blue';
     ender.style.color = 'blue';
     sobre.style.color = 'white';
-    copy.style.color = 'white';
 }
 
 
 
 function lightMode() {
    if(width <= 500) {
-    dark.innerHTML = `<i class="fa-regular fa-moon fa-2xl" style="color: rgb(62, 61, 61);" onclick="darkMode()"></i>`;
+    dark.innerHTML = `<i class="fa-regular fa-moon fa-2xl" style="color: black;" onclick="darkMode()"></i>`;
    }
 
    else {
-    dark.innerHTML = `<i class="fa-regular fa-moon fa-lg" style="color: rgb(62, 61, 61);" onclick="darkMode()"></i>`;
+    dark.innerHTML = `<i class="fa-regular fa-moon fa-lg" style="color: black;" onclick="darkMode()"></i>`;
    }
 
+    Bmobile.style.color = 'black';
     background.style.backgroundColor = '#fafafa';
     about.style.color = 'black';
     proje.style.color = 'black';
