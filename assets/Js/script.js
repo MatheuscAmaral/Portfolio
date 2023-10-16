@@ -544,7 +544,7 @@ else {
                             <a style="color: #fff;" href="https://www.canva.com/design/DAFcwM_WAcg/6w015JCe-npnIDy-OVG62A/view?utm_content=DAFcwM_WAcg&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">Currículo</a>
                         </div>
                         <div class="mobileCard" style="background-color: #01d;">
-                            <a style="color: #fff;"href="https://api.whatsapp.com/send/?phone=5531997066818&text=ola&type=phone_number&app_absent=0"> Entre em contato conosco</a>
+                            <a style="color: #fff;"href="https://api.whatsapp.com/send/?phone=5531997066818&text=ola&type=phone_number&app_absent=0">Me contate</a>
                         </div>
                     </div>
                 </div>
@@ -576,13 +576,13 @@ else {
 function darkMode() {
     if (width <= 500) {
         dark.innerHTML = `<i class="fa-regular fa-sun fa-2xl" style="color: white;"  onclick="lightMode()"></i>`
+        Bmobile.style.color = 'white';
     }
     
     else {
         dark.innerHTML = `<i class="fa-regular fa-sun fa-lg" style="color: white;"  onclick="lightMode()"></i>`
     }
     
-    Bmobile.style.color = 'white';
     background.style.backgroundColor = '#090911';
     copy.style.color = 'white';
     about.style.color = 'white';
@@ -604,14 +604,15 @@ function darkMode() {
 function lightMode() {
    if(width <= 500) {
     dark.innerHTML = `<i class="fa-regular fa-moon fa-2xl" style="color: black;" onclick="darkMode()"></i>`;
+    Bmobile.style.color = 'black';
    }
 
    else {
-    dark.innerHTML = `<i class="fa-regular fa-moon fa-lg" style="color: black;" onclick="darkMode()"></i>`;
-   }
-
-    Bmobile.style.color = 'black';
+       dark.innerHTML = `<i class="fa-regular fa-moon fa-lg" style="color: black;" onclick="darkMode()"></i>`;
+    }
+    
     background.style.backgroundColor = '#fafafa';
+    copy.style.color = 'black ';
     about.style.color = 'black';
     proje.style.color = 'black';
     curri.style.color = 'black';
@@ -623,7 +624,6 @@ function lightMode() {
     mail.style.color = 'black';
     ender.style.color = 'black';
     sobre.style.color = 'black';
-    copy.style.color = 'black ';
 }
 
 document.addEventListener('DOMContentLoaded', () => {
