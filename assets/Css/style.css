@@ -20,12 +20,14 @@ html {
     font-family: 'Montserrat', sans-serif;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-top: 40px;
 }
 
 
 #header img {
     margin-left: 180px;
+    width: 50px;
 }
 
 .button {
@@ -399,6 +401,7 @@ p {
         gap: 4rem;
         align-items: center;
         justify-content: center;
+        margin-left: 40px;
     }
 
     #header #info {

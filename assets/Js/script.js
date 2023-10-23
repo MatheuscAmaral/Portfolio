@@ -8,8 +8,8 @@ if(width >= 1400) {
     root.innerHTML = `
     <div id="background">
             <main>
-                <header id="header">
-                    <img id="logo" src="/assets/Images/logoMA.png" width="60px">
+                <header id="header" style="margin-left: 20px">
+                    <img id="logo" src="/assets/Images/logoMA.png">
                     <div id="info">
                         <strong><a id="about" href="#aboutMe"><p>Sobre</p></a></strong>
                         <strong><a id="proje" href="#projects"><p>Projetos</p></a></strong>
