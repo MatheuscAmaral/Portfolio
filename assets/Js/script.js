@@ -9,7 +9,7 @@ if(width >= 1400) {
     <div id="background">
             <main>
                 <header id="header">
-                    <img id="logo" src="/assets/Images/logo 1.png">
+                    <img id="logo" src="/assets/Images/logoMA.png" width="60px">
                     <div id="info">
                         <strong><a id="about" href="#aboutMe"><p>Sobre</p></a></strong>
                         <strong><a id="proje" href="#projects"><p>Projetos</p></a></strong>
@@ -142,7 +142,7 @@ else if (width > 900 && width <= 1400) {
     <div id="background">
             <main>
                 <header id="header">
-                    <img id="logo" style="border 1px solid white" src="/assets/Images/logo 1.png">
+                    <img id="logo" style="border 1px solid white" src="/assets/Images/logoMA.png">
                     <div id="info">
                         <strong><a id="about" href="#aboutMe"><p>Sobre</p></a></strong>
                         <strong><a id="proje" href="#projects"><p>Projetos</p></a></strong>
@@ -275,7 +275,7 @@ else if (width > 500 && width <= 900) {
     <div id="background">
             <main>
                 <header id="header" style="display: flex; gap: 2rem;">
-                    <img id="logo" style="border 1px solid white" src="/assets/Images/logo 1.png">
+                    <img id="logo" style="border 1px solid white" src="/assets/Images/logoMA.png">
                     <div id="info">
                         <strong><a id="about" href="#aboutMe"><p>Sobre</p></a></strong>
                         <strong><a id="proje" href="#projects"><p>Projetos</p></a></strong>
@@ -410,7 +410,7 @@ else {
                     <div>
                         <i id="buttonMobile" class="fa-solid fa-bars-staggered fa-xl"  style="color: black;" onclick="mobile()"></i>
                     </div>
-                    <img id="logo" src="/assets/Images/logo 1.png">
+                    <img id="logo" src="/assets/Images/logoMA.png">
                     <div id="info">
                         <div id="dark">
                             <button onclick="darkMode()" class="button"><i class="fa-regular fa-moon fa-2xl" style="color: black;"></i></button>
