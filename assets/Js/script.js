@@ -72,68 +72,7 @@ if(width >= 1400) {
                     </div>
                 </section>
 
-                <section id="faleComigo">
-                        <h1 id="titleTalk">Entre em <span style="color: #0d1cf3">contato</span> comigo</h1>
-                        <div style="display: flex; gap: 13rem; justify-content: center; margin-bottom: 50px">
-                            <div  style="display: flex; flex-direction: column; gap: 2rem">
-                                <div style="display: flex; gap: 1rem">
-                                    <button style="background-color: #0d1cf3; padding: 20px; border: 0; border-radius: 5px"><i class="fa-solid fa-phone fa-xl" style="color: #ffffff;"></i></button>
-                                    <div style="display: flex; flex-direction: column; gap: .5rem">
-                                        <p style="color: lightgray">Me ligue</p>
-                                        <span id="number"> 31 992661386</span>
-                                    </div>
-                                </div>
-                                <div style="display: flex; gap: 1rem">
-                                    <button style="background-color: #0d1cf3; padding: 21px; border: 0; border-radius: 5px"><i class="fa-solid fa-at fa-lg" style="color: #ffffff;"></i></button>
-                                    <div style="display: flex; flex-direction: column; gap: .5rem">
-                                        <p style="color: lightgray">E-mail</p>
-                                        <span id="mail">matheuscamposdoamaral15@gmail.com</span>
-                                    </div>
-                                </div>
-                                <div style="display: flex; gap: 1rem">
-                                    <button style="background-color: #0d1cf3; padding: 23px; border: 0; border-radius: 5px"><i class="fa-solid fa-location-dot fa-lg" style="color: #ffffff;"></i></button>
-                                    <div style="display: flex; flex-direction: column; gap: .5rem">
-                                        <p style="color: lightgray">Endereço</p>
-                                        <span id="ender">Contagem - MG</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="display: flex; flex-direction: column; gap: 1rem">
-                                <div style="display: flex; gap: .5rem">
-                                    <input 
-                                        type="text" 
-                                        placeholder="Assunto"
-                                        required
-                                        id="assunto"
-                                        style="padding: 13px; border-radius: 8px; border: 1px solid lightgray; width: 450px"
-                                    />
-                                    <input 
-                                        type="email" 
-                                        placeholder="E-mail"
-                                        required
-                                        id="email"
-                                        style="padding: 13px; border-radius: 8px; border: 1px solid lightgray; width: 450px"
-                                    />
-                                </div>
-                                <input
-                                    type="text"
-                                    placeholder="Mensagem"
-                                    required
-                                    id="mensagem"
-                                    style="padding: 13px; border-radius: 8px; border: 1px solid lightgray; height: 130px"
-                                />
-                                <input 
-                                    type="submit"
-                                    value="Enviar mensagem"
-                                    id="submit"
-                                    onclick="enviar()"
-                                    style="padding: 15px; width: 170px; border: 0; border-radius: 6px; margin-left: 795px; background-color: #0d1cf3; color: white; font-size: 15px"
-                                />
-                            </div>
-                        </div>
-                        <strong><p id="copy" style="display: flex; gap: .5rem;  align-items: center; justify-content: center; color: black; margin-top: 100px; font-size: 14px"><i class="fa-solid fa-copyright fa-lg" style="color: #0d1cf3;"></i>2023 Matheus Amaral</p></strong>
-                        </div>
-                </section>
+                
             </div>`
 }
 
@@ -205,68 +144,6 @@ else if (width > 900 && width <= 1400) {
                     </div>
                 </section>
 
-                <section id="faleComigo">
-                        <h1 id="titleTalk">Entre em <span style="color: #0d1cf3">contato</span> comigo</h1>
-                        <div style="display: flex; gap: 5rem; justify-content: center;">
-                            <div style="display: flex; flex-direction: column; gap: 2rem">
-                                <div style="display: flex; gap: 1rem">
-                                    <button style="background-color: #0d1cf3; padding: 20px; border: 0; border-radius: 5px"><i class="fa-solid fa-phone fa-xl" style="color: #ffffff;"></i></button>
-                                    <div style="display: flex; flex-direction: column; gap: .5rem">
-                                        <p style="color: lightgray">Me ligue</p>
-                                        <span id="number"> 31 992661386</span>
-                                    </div>
-                                </div>
-                                <div style="display: flex; gap: 1rem">
-                                    <button style="background-color: #0d1cf3; padding: 21px; border: 0; border-radius: 5px"><i class="fa-solid fa-at fa-lg" style="color: #ffffff;"></i></button>
-                                    <div style="display: flex; flex-direction: column; gap: .5rem">
-                                        <p style="color: lightgray">E-mail</p>
-                                        <span id="mail">matheuscamposdoamaral15@gmail.com</span>
-                                    </div>
-                                </div>
-                                <div style="display: flex; gap: 1rem">
-                                    <button style="background-color: #0d1cf3; padding: 23px; border: 0; border-radius: 5px"><i class="fa-solid fa-location-dot fa-lg" style="color: #ffffff;"></i></button>
-                                    <div style="display: flex; flex-direction: column; gap: .5rem">
-                                        <p style="color: lightgray">Endereço</p>
-                                        <span id="ender">Contagem - MG</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="display: flex; flex-direction: column; gap: 1rem">
-                                <div style="display: flex; gap: .5rem">
-                                    <input 
-                                        type="text" 
-                                        placeholder="Assunto"
-                                        required
-                                        id="assunto"
-                                        style="padding: 13px; border-radius: 8px; border: 1px solid lightgray; width: 310px"
-                                    />
-                                    <input 
-                                        type="email" 
-                                        placeholder="E-mail"
-                                        required
-                                        id="email"
-                                        style="padding: 13px; border-radius: 8px; border: 1px solid lightgray; width: 310px"
-                                    />
-                                </div>
-                                <input
-                                    type="text"
-                                    placeholder="Mensagem"
-                                    required
-                                    id="mensagem"
-                                    style="padding: 13px; border-radius: 8px; border: 1px solid lightgray; height: 130px"
-                                />
-                                <input 
-                                    type="submit"
-                                    value="Enviar mensagem"
-                                    id="submit"
-                                    onclick="enviar()"
-                                    style="padding: 15px; width: 170px; border: 0; border-radius: 6px; margin-left: 515px; background-color: #0d1cf3; color: white; font-size: 15px"
-                                />
-                            </div>
-                        </div>
-                        <strong><p id="copy" style="display: flex; gap: .5rem;  align-items: center; justify-content: center; color: black; margin-top: 100px; font-size: 14px"><i class="fa-solid fa-copyright fa-lg" style="color: #0d1cf3;"></i>2023 Matheus Amaral</p></strong>
-                        </div>
-                </section>
             </div>`
 }
 
@@ -336,69 +213,6 @@ else if (width > 500 && width <= 900) {
                         <a id="button" href=${github} style="padding: 26px; font-size: 24px; width: 150px; border-radius: 16px" target="_blank">Ver Mais</a>
                     </div>
                 </section>
-
-                <section id="faleComigo">
-                        <h1 id="titleTalk">Entre em <span style="color: #0d1cf3">contato</span> comigo</h1>
-                        <div style="display: flex; flex-direction: column; gap: 5rem; justify-content: center; margin-bottom: 130px">
-                            <div style="display: flex; flex-direction: column; gap: 2rem; margin-left: 80px">
-                                <div style="display: flex; gap: 1rem">
-                                    <button style="background-color: #0d1cf3; padding: 20px; border: 0; border-radius: 5px"><i class="fa-solid fa-phone fa-xl" style="color: #ffffff;"></i></button>
-                                    <div style="display: flex; flex-direction: column; gap: .3rem">
-                                        <p style="color: lightgray; font-size: 20px">Me ligue</p>
-                                        <span id="number style="font-size: 20px"> 31 992661386</span>
-                                    </div>
-                                </div>
-                                <div style="display: flex; gap: 1rem">
-                                    <button style="background-color: #0d1cf3; padding: 21px; border: 0; border-radius: 5px"><i class="fa-solid fa-at fa-lg" style="color: #ffffff;"></i></button>
-                                    <div style="display: flex; flex-direction: column; gap: .3rem">
-                                        <p style="color: lightgray; font-size: 20px">E-mail</p>
-                                        <span id="mail" style="font-size: 20px">matheuscamposdoamaral15@gmail.com</span>
-                                    </div>
-                                </div>
-                                <div style="display: flex; gap: 1rem">
-                                    <button style="background-color: #0d1cf3; padding: 23px; border: 0; border-radius: 5px"><i class="fa-solid fa-location-dot fa-lg" style="color: #ffffff;"></i></button>
-                                    <div style="display: flex; flex-direction: column; gap: .3rem">
-                                        <p style="color: lightgray; font-size: 20px">Endereço</p>
-                                        <span id="ender" style="font-size: 20px">Contagem - MG</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="display: flex; flex-direction: column; gap: 1rem; justify-content: center; align-items: center;">
-                                <div style="display: flex; gap: .5rem">
-                                    <input 
-                                        type="text" 
-                                        placeholder="Assunto"
-                                        required
-                                        id="assunto"
-                                        style="padding: 13px; border-radius: 8px; border: 1px solid lightgray; width: 310px"
-                                    />
-                                    <input 
-                                        type="email" 
-                                        placeholder="E-mail"
-                                        required
-                                        id="email"
-                                        style="padding: 13px; border-radius: 8px; border: 1px solid lightgray; width: 310px"
-                                    />
-                                </div>
-                                <input
-                                    type="text"
-                                    placeholder="Mensagem"
-                                    required
-                                    id="mensagem"
-                                    style="padding: 13px; border-radius: 8px; border: 1px solid lightgray; height: 130px; width: 660px"
-                                />
-                                <input 
-                                    type="submit"
-                                    value="Enviar mensagem"
-                                    id="submit"
-                                    onclick="enviar()"
-                                    style="padding: 15px; width: 170px; border: 0; border-radius: 6px; margin-left: 515px; background-color: #0d1cf3; color: white; font-size: 15px"
-                                />
-                            </div>
-                        </div>
-                        <strong><p id="copy" style="display: flex; gap: .5rem;  align-items: center; justify-content: center; color: black; margin-top: 100px; font-size: 14px"><i class="fa-solid fa-copyright fa-lg" style="color: #0d1cf3;"></i>2023 Matheus Amaral</p></strong>
-                        </div>
-                </section>
             </div>`
 }
 
@@ -465,68 +279,6 @@ else {
                     <div style="display: flex; justify-content: center; align-items: center;">
                         <a id="button" href=${github} target="_blank">Ver Mais</a>
                     </div>
-                </section>
-
-                <section id="faleComigo">
-                        <h1 id="titleTalk" style="color: #0d1cf3">Entre em <span style="color: #0d1cf3">contato</span> comigo</h1>
-                        <div style="display: flex; flex-direction: column-reverse; gap: 6rem; justify-content: center; align-itens: center">
-                            <div style="display: flex; flex-direction: column; gap: 2rem; justify-content: center; margin-left: 20px">
-                                <div style="display: flex; gap: 1rem">
-                                    <button style="background-color: #0d1cf3; padding: 20px; border: 0; border-radius: 5px"><i class="fa-solid fa-phone fa-xl" style="color: #ffffff;"></i></button>
-                                    <div style="display: flex; flex-direction: column; gap: .5rem">
-                                        <p style="color: lightgray">Me ligue</p>
-                                        <span id="number" style="color: #0d1cf3"> 31 992661386</span>
-                                    </div>
-                                </div>
-                                <div style="display: flex; gap: 1rem">
-                                    <button style="background-color: #0d1cf3; padding: 21px; border: 0; border-radius: 5px"><i class="fa-solid fa-at fa-lg" style="color: #ffffff;"></i></button>
-                                    <div style="display: flex; flex-direction: column; gap: .5rem">
-                                        <p style="color: lightgray">E-mail</p>
-                                        <span id="mail" style="font-size: 15px; color: #0d1cf3">matheuscamposdoamaral15@gmail.com</span>
-                                    </div>
-                                </div>
-                                <div style="display: flex; gap: 1rem">
-                                    <button style="background-color: #0d1cf3; padding: 23px; border: 0; border-radius: 5px"><i class="fa-solid fa-location-dot fa-lg" style="color: #ffffff;"></i></button>
-                                    <div style="display: flex; flex-direction: column; gap: .5rem">
-                                        <p style="color: lightgray">Endereço</p>
-                                        <span id="ender" style="color: #0d1cf3">Contagem - MG</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="display: flex; flex-direction: column; gap: 1rem">
-                                <div style="display: flex; gap: .5rem; justify-content: center">
-                                    <input 
-                                        type="text" 
-                                        placeholder="Assunto"
-                                        required
-                                        id="assunto"
-                                        style="padding: 13px; border-radius: 8px; border: 1px solid lightgray; width: 150px"
-                                    />
-                                    <input 
-                                        type="email" 
-                                        placeholder="E-mail"
-                                        required
-                                        id="email"
-                                        style="padding: 13px; border-radius: 8px; border: 1px solid lightgray; width: 150px"
-                                    />
-                                </div>
-                                <input
-                                    type="text"
-                                    placeholder="Mensagem"
-                                    required
-                                    id="mensagem"
-                                    style="padding: 13px; border-radius: 8px; border: 1px solid lightgray; height: 130px; width: 340px; margin-left: 10px"
-                                />  
-                                <input 
-                                    type="submit"
-                                    value="Enviar mensagem"
-                                    id="submit"
-                                    onclick="enviar()"
-                                    style="padding: 15px; width: 170px; border: 0; border-radius: 6px; margin-left: 105px; background-color: #0d1cf3; color: white; font-size: 15px"
-                                />
-                            </div>
-                        </div>
-                        </div>
                 </section>
             </div>`
 
