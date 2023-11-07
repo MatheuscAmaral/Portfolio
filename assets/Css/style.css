@@ -15,6 +15,159 @@ html {
     scroll-behavior: smooth;
 }
 
+#sobre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 130px;
+    gap: 2rem;
+    margin-bottom: 500px;
+}
+
+.img img{
+    width: 180px;
+    border-radius: 50%;
+    border: 1.5px solid #0d1cf3;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    padding-left: 210px;
+    padding-right: 210px;
+}
+
+.content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+}
+
+.content span {
+    color: #0d1cf3;
+}
+
+.content p {
+    font-size: 16px;
+}
+
+#experiencias {
+display: flex;
+justify-content: center;
+position: absolute;
+margin-top: 950px;
+padding-left: 220px;
+padding-right: 220px;
+}
+
+#experiencias p {
+font-size: 13px;
+}
+
+.top {
+display: flex;
+flex-direction: column;
+gap: 1rem;
+}
+
+.mid {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: .4rem;
+}
+
+.low {
+display: flex;
+flex-direction: column;
+gap: .4rem;
+align-items: center;
+}
+
+.low p {
+text-align: center;
+}
+
+.subtitle {
+color: #05109e;
+}
+
+.content_card p {
+text-align: center;
+}
+
+.resumo {
+display: flex;  
+flex-direction: column;
+align-items: center;
+gap: 2rem;
+background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,0,255,1) 100%, rgba(0,212,255,1) 100%);
+color: white;
+padding: 60px;
+height: 500px;
+padding-left: 400px;
+padding-right: 400px;
+
+}
+
+.card1 {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 1.5rem;
+text-align: center;
+padding: 60px;
+border: .1px solid rgb(223, 223, 223); 
+border-radius: 16px 0px 0px 16px;
+background-color: white;
+}
+
+.card2 {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 1.5rem;
+text-align: center;
+padding: 60px;
+border: .1px solid rgb(223, 223, 223); 
+background-color: white;
+}
+
+.card3 {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 1.5rem;
+text-align: center;
+padding: 60px;
+border: .1px solid rgb(223, 223, 223); 
+border-radius: 0px 16px 16px 0px;
+background-color: white;
+
+}
+
+.icon {
+background-color: #0d1cf3;
+border-radius: 50%;
+padding: 25px;
+width: 21px;
+}
+
+.content_card {
+display: flex;
+flex-direction: column;
+gap: 3rem;
+}
+
+
 
 #header {
     font-family: 'Montserrat', sans-serif;
@@ -114,6 +267,11 @@ html {
 img#imagem {
     position: relative;
     animation: moveUpDown 2s ease-in-out infinite;
+
+}
+
+img {
+    user-select: none;
 }
 
 @keyframes moveUpDown {
@@ -217,13 +375,17 @@ img#imagem {
     padding-bottom: 0px;
     display: flex;
     flex-direction: column;
-    gap: 10rem;
+    gap: 6rem;
 }
 
 #faleComigo h1{
     font-family: 'Raleway', sans-serif;
     font-size: 50px; 
     text-align: center;
+}
+
+#faleComigo input {
+    background-color: transparent;
 }
 
 
@@ -736,7 +898,154 @@ p {
     }
     
 
+    #sobre {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 100px;
+        padding-bottom: 130px;
+        gap: 2rem;
+        margin-bottom: 500px;
+    }
 
+    .img img{
+        width: 180px;
+        border-radius: 50%;
+        border: 1.5px solid #0d1cf3;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+        padding-left: 210px;
+        padding-right: 210px;
+    }
+
+    .content h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 28px;
+    }
+
+    .content span {
+        color: #0d1cf3;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+
+   #experiencias {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    margin-top: 950px;
+    padding-left: 120px;
+    padding-right: 120px;
+   }
+
+   #experiencias p {
+    font-size: 13px;
+   }
+
+   .top {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+   }
+
+   .mid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .4rem;
+   }
+
+   .low {
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+    align-items: center;
+   }
+
+   .low p {
+    text-align: center;
+   }
+
+   .subtitle {
+    color: #05109e;
+   }
+
+   .content_card p {
+    text-align: center;
+   }
+
+   .resumo {
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background: rgb(10,0,201);
+    background: linear-gradient(90deg, rgba(10,0,201,1) 0%, rgba(9,9,62,1) 86%);
+    color: white;
+    padding: 60px;
+    height: 500px;
+   }
+   
+   .card1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+    padding: 60px;
+    border: .1px solid rgb(223, 223, 223); 
+    border-radius: 16px 0px 0px 16px;
+    background-color: white;
+}
+
+.card2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+    padding: 60px;
+    border: .1px solid rgb(223, 223, 223); 
+    background-color: white;
+}
+
+.card3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+    padding: 60px;
+    border: .1px solid rgb(223, 223, 223); 
+    border-radius: 0px 16px 16px 0px;
+    background-color: white;
+
+   }
+   
+   .icon {
+    background-color: #0d1cf3;
+    border-radius: 50%;
+    padding: 25px;
+    width: 21px;
+   }
+   
+   .content_card {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+   }
 
     #talk a {
         padding: 12px;

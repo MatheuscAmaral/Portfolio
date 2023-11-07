@@ -11,17 +11,16 @@ if(width >= 1400) {
                 <header id="header" style="margin-left: 20px">
                     <img id="logo" src="/assets/Images/logoMA.png">
                     <div id="info">
-                        <strong><a id="about" href="#aboutMe"><p>Sobre</p></a></strong>
+                        <strong><a id="about" href="#sobre"><p>Sobre</p></a></strong>
                         <strong><a id="proje" href="#projects"><p>Projetos</p></a></strong>
                         <strong><a id="curri" href="https://www.canva.com/design/DAFcwM_WAcg/6w015JCe-npnIDy-OVG62A/view?utm_content=DAFcwM_WAcg&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"><p>Currículo</p></a></strong>
                         <strong><a id="talka" href="#faleComigo">Fale Comigo</a></strong>
                         <div id="dark">
                             <button onclick="darkMode()" class="button"><i class="fa-regular fa-moon fa-xl" style="color: #000000;"></i></button>
                         </div>
-                    </div>
-            
-                    
+                    </div>  
                 </header>
+
                     <div id="mid">
                     <div id="mid-text">
                             <div id="firstText">
@@ -50,6 +49,119 @@ if(width >= 1400) {
                         </div>
                     </div>
                 </main>
+
+                <section id="sobre">
+                    <div class="resumo">
+                        <div class="img">
+                            <img src="/assets/Images/me.jpg" alt="foto minha">
+                        </div>
+                
+                        <div class="content">
+                            <p>Olá, meu nome é Matheus. Prazer em conhecê-lo. Comecei minha carreira em 2023, já trabalho na área de TI, como QA e Analista de Suporte, mas também estudo bastante para me tornar um desenvolvedor consolidado, tenho um bacharelado em Sistemas de informação em andamento e também vários cursos mais focados nas plataformas Rocketseat e Udemy.</p>
+                        </div>
+
+                    </div>
+                    <div id="experiencias">
+                        <div class="card1">
+                                <span class="icon">
+                                    <i class="fa-solid fa-graduation-cap fa-xl" style="color: #ffffff;"></i>
+                                </span>
+
+                                <div class="content_card">
+                                    <div class="top">
+                                        <h1>Formação</h1>
+                                        <p>Atualmente estou cursando o Bacharelado <br> em Sistemas de Informação na PUC Minas, onde estou aprimorando as habilidades essenciais.</p>
+                                    </div>
+
+                                    <div class="mid">
+                                        <span class="subtitle">Linguagens estudadas:</span>
+                                        <p>Html, Css, JavaScript, C#, Api, Json, fsfsdfs.</p>
+                                    </div>
+
+
+                                    <div class="low">
+                                        <span class="subtitle">Ferramentas de Desenvolvimento:</span>
+                                        <div>
+                                            <p>Git</p>
+                                            <p>GitHub</p>
+                                            <p>Bootstrap</p>
+                                            <p>Vercel</p>
+                                            <p>Replit</p>
+                                            <p>VS Code</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                        </div>
+
+                        <div class="card2">
+                                <span class="icon">
+                                    <i class="fa-solid fa-book fa-xl" style="color: #ffffff;"></i>
+                                </span>
+            
+                                <div class="content_card">
+                                    <div class="top">
+                                        <h1>Cursos</h1>
+                                        <p>Estou constantemente aprimorando minhas <br> habilidades por meio de diversos cursos na Rocketseat <br> e na Udemy, buscando me tornar um profissional altamente capacitado e atualizado.</p>
+                                    </div>
+            
+            
+                                    <div class="mid">
+                                        <span class="subtitle">Linguagens estudadas:</span>
+                                        <p>Html, Css, JavaScript, C#, Api, React, Typescript, React Native, Node Js, Php.</p>
+                                    </div>
+            
+            
+                                    <div class="low">
+                                        <span class="subtitle">Cursos:</span>
+                                        <div>
+                                            <p>Rocketseat Discover</p>
+                                            <p>Rocketseat Explorer</p>
+                                            <p>Rocketseat Ignite</p>
+                                            <p>Udemy React + Typescript</p>
+                                            <p>Udemy PHP Web + SQL</p>
+                                            <p>Curso em vídeo: Algoritmos e Lógica</p>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+
+                        <div class="card3">
+                                <span class="icon">
+                                    <i class="fa-solid fa-briefcase fa-xl" style="color: #ffffff;"></i>
+                                </span>
+            
+                                <div class="content_card">
+                                    <div class="top">
+                                        <h1>Empresas</h1>
+                                        <p>Com conhecimento sólido em SQL Server, ERP, <br> B2B e CRM, estou atualmente na empresa, exercendo funções versáteis como QA, Analista,<br> Suporte. </p>
+                                    </div>
+            
+            
+                                    <div class="mid">
+                                        <span class="subtitle">Competências:</span>
+                                        <p>SQL Server, Erp, B2b, Crm, Scrum, Insomnia.</p>
+                                    </div>
+            
+            
+                                    <div class="low">
+                                        <span class="subtitle">Funções executadas:</span>
+                                        <div>
+                                            <p>QA</p>
+                                            <p>Analista</p>
+                                            <p>Suporte</p>
+                                            <p>Crm</p>
+                                            <p>Scrum</p>
+                                            <p>Tester</p>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+
+                    </div>
+                </section>
+                
+                
 
                 <section id="projects">
                     <div class="titles">
@@ -83,12 +195,12 @@ else if (width > 900 && width <= 1400) {
                 <header id="header">
                     <img id="logo" style="border 1px solid white" src="/assets/Images/logoMA.png">
                     <div id="info">
-                        <strong><a id="about" href="#aboutMe"><p>Sobre</p></a></strong>
+                        <strong><a id="about" href="#sobre"><p>Sobre</p></a></strong>
                         <strong><a id="proje" href="#projects"><p>Projetos</p></a></strong>
                         <strong><a id="curri" href="https://www.canva.com/design/DAFcwM_WAcg/6w015JCe-npnIDy-OVG62A/view?utm_content=DAFcwM_WAcg&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"><p>Currículo</p></a></strong>
                         <strong><a id="talka" href="#faleComigo">Fale Comigo</a></strong>
                         <div id="dark">
-                            <button onclick="darkMode()" class="button"><i class="fa-regular fa-moon fa-xl" style="color: #000000;"></i></button>
+                            <i class="fa-solid fa-lightbulb fa-lg" style="color: #000000;" onclick="darkMode()"></i>
                         </div>
                     </div>
             
@@ -122,6 +234,117 @@ else if (width > 900 && width <= 1400) {
                         </div>
                     </div>
                 </main>
+
+                <section id="sobre">
+                    <div class="resumo">
+                        <div class="img">
+                            <img src="/assets/Images/me.jpg" alt="foto minha">
+                        </div>
+                
+                        <div class="content">
+                            <p>Olá, meu nome é Matheus. Prazer em conhecê-lo. Comecei minha carreira em 2023, já trabalho na área de TI, como QA e Analista de Suporte, mas também estudo bastante para me tornar um desenvolvedor consolidado, tenho um bacharelado em Sistemas de informação em andamento e também vários cursos mais focados nas plataformas Rocketseat e Udemy.</p>
+                        </div>
+
+                    </div>
+                    <div id="experiencias">
+                        <div class="card1">
+                                <span class="icon">
+                                    <i class="fa-solid fa-graduation-cap fa-xl" style="color: #ffffff;"></i>
+                                </span>
+
+                                <div class="content_card">
+                                    <div class="top">
+                                        <h1>Formação</h1>
+                                        <p>Atualmente estou cursando o Bacharelado <br> em Sistemas de Informação na PUC Minas, onde estou aprimorando as habilidades essenciais.</p>
+                                    </div>
+
+                                    <div class="mid">
+                                        <span class="subtitle">Linguagens estudadas:</span>
+                                        <p>Html, Css, JavaScript, C#, Api, Json, fsfsdfs.</p>
+                                    </div>
+
+
+                                    <div class="low">
+                                        <span class="subtitle">Ferramentas de Desenvolvimento:</span>
+                                        <div>
+                                            <p>Git</p>
+                                            <p>GitHub</p>
+                                            <p>Bootstrap</p>
+                                            <p>Vercel</p>
+                                            <p>Replit</p>
+                                            <p>VS Code</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                        </div>
+
+                        <div class="card2">
+                                <span class="icon">
+                                    <i class="fa-solid fa-book fa-xl" style="color: #ffffff;"></i>
+                                </span>
+            
+                                <div class="content_card">
+                                    <div class="top">
+                                        <h1>Cursos</h1>
+                                        <p>Estou constantemente aprimorando minhas habilidades por meio de diversos cursos  na Rocketseat <br> e na Udemy , buscando me tornar um profissional altamente capacitado.</p>
+                                    </div>
+            
+            
+                                    <div class="mid">
+                                        <span class="subtitle">Linguagens estudadas:</span>
+                                        <p>Html, Css, JavaScript, C#, Api, React, Typescript, React Native, Node Js, Php.</p>
+                                    </div>
+            
+            
+                                    <div class="low">
+                                        <span class="subtitle">Cursos:</span>
+                                        <div>
+                                            <p>Rocketseat Discover</p>
+                                            <p>Rocketseat Explorer</p>
+                                            <p>Rocketseat Ignite</p>
+                                            <p>Udemy React + Typescript</p>
+                                            <p>Udemy PHP Web + SQL</p>
+                                            <p>Curso em vídeo: Algoritmos e Lógica</p>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+
+                        <div class="card3">
+                                <span class="icon">
+                                    <i class="fa-solid fa-briefcase fa-xl" style="color: #ffffff;"></i>
+                                </span>
+            
+                                <div class="content_card">
+                                    <div class="top">
+                                        <h1>Empresas</h1>
+                                        <p>Com conhecimento sólido em SQL Server, <br> ERP, B2B e CRM, estou atualmente na empresa, exercendo funções versáteis como QA, Analista, Suporte.</p>
+                                    </div>
+            
+            
+                                    <div class="mid">
+                                        <span class="subtitle">Competências:</span>
+                                        <p>SQL Server, Erp, B2b, Crm, Scrum, Insomnia.</p>
+                                    </div>
+            
+            
+                                    <div class="low">
+                                        <span class="subtitle">Funções executadas:</span>
+                                        <div>
+                                            <p>QA</p>
+                                            <p>Analista</p>
+                                            <p>Suporte</p>
+                                            <p>Crm</p>
+                                            <p>Scrum</p>
+                                            <p>Tester</p>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+
+                    </div>
+                </section>
                 
                 <section id="projects">
                     <div class="titles">
@@ -141,6 +364,46 @@ else if (width > 900 && width <= 1400) {
                     </div>
                     <div style="display: flex; justify-content: center; align-items: center;">
                         <a id="button" href=${github} target="_blank">Ver Mais</a>
+                    </div>
+                </section>
+
+                <section id="faleComigo">
+                    <h1 id="titleTalk">Entre em <span style="color: #0d1cf3">contato</span> comigo</h1>
+                    <div style="display: flex;  gap: 5rem; justify-content: center; margin-bottom: 130px">
+                        <div style="display: flex; flex-direction: column; gap: 1rem; justify-content: center; align-items: center;">
+                            <div style="display: flex; gap: .5rem">
+                                <input 
+                                    type="text" 
+                                    placeholder="Assunto"
+                                    required
+                                    id="assunto"
+                                    style="padding: 13px; border-radius: 8px; border: 1px solid #0d1cf3; color: gray; width: 310px"
+                                />
+                                <input 
+                                    type="email" 
+                                    placeholder="E-mail"
+                                    required
+                                    id="email"
+                                    style="padding: 13px; border-radius: 8px; border: 1px solid #0d1cf3; color: gray; width: 310px"
+                                />
+                            </div>
+                            <input
+                                type="text"
+                                placeholder="Mensagem"
+                                required
+                                id="mensagem"
+                                style="padding: 13px; border-radius: 8px; border: 1px solid #0d1cf3; color: gray; height: 130px; width: 660px"
+                            />
+                            <input 
+                                type="submit"
+                                value="Enviar mensagem"
+                                id="submit"
+                                onclick="enviar()"
+                                style="padding: 15px; width: 175px; border: 0; border-radius: 6px; margin-left: 515px; background-color: #0d1cf3; color: white; font-size: 15px; cursor: pointer;"
+                            />
+                        </div>
+                    </div>
+                    <strong><p id="copy" style="display: flex; gap: .5rem;  align-items: center; justify-content: center; color: black; margin-top: 100px; font-size: 14px"><i class="fa-solid fa-copyright fa-lg" style="color: #0d1cf3;"></i>2023 Matheus Amaral</p></strong>
                     </div>
                 </section>
 
@@ -327,12 +590,11 @@ else {
 
 function darkMode() {
     if (width <= 500) {
-        dark.innerHTML = `<i class="fa-regular fa-sun fa-2xl" style="color: white;"  onclick="lightMode()"></i>`
+        dark.innerHTML = `<i class="fa-solid fa-lightbulb fa-lg" style="color: #ffffff;" onclick="lightMode()"></i>`
         Bmobile.style.color = 'white';
     }
-    
     else {
-        dark.innerHTML = `<i class="fa-regular fa-sun fa-lg" style="color: white;"  onclick="lightMode()"></i>`
+        dark.innerHTML = `<i class="fa-solid fa-lightbulb fa-lg" style="color: #ffffff;" onclick="lightMode()"></i>`
     }
     
     background.style.backgroundColor = '#090911';
@@ -355,12 +617,12 @@ function darkMode() {
 
 function lightMode() {
    if(width <= 500) {
-    dark.innerHTML = `<i class="fa-regular fa-moon fa-2xl" style="color: black;" onclick="darkMode()"></i>`;
+    dark.innerHTML = `<i class="fa-solid fa-lightbulb fa-xl" style="color: #000000;" onclick="darkMode()"></i>`;
     Bmobile.style.color = 'black';
    }
 
    else {
-       dark.innerHTML = `<i class="fa-regular fa-moon fa-lg" style="color: black;" onclick="darkMode()"></i>`;
+       dark.innerHTML = `<i class="fa-solid fa-lightbulb fa-xl" style="color: #000000;" onclick="darkMode()"></i>`;
     }
     
     background.style.backgroundColor = '#fafafa';
@@ -398,11 +660,23 @@ function enviar() {
     const mensagem = `Assunto: ${assunto} %0AEmail: ${email} %0AMensagem: ${msg}`;
 
 
+    if (assunto !== "" && email !== "" && msg !== "" ) {
+        const url = `https://api.whatsapp.com/send?phone=${numeroDeTelefone}&text=${mensagem}`;
+        window.location.href = url;
+    }
+    
+    else {
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Preencha todas as informações!",
+            width: 400,
+          });
 
-    const url = `https://api.whatsapp.com/send?phone=${numeroDeTelefone}&text=${mensagem}`;
+    }
+
 
     
-    window.location.href = url;
 }
 
 
