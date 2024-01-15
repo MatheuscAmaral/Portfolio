@@ -1,8 +1,14 @@
 import { useState } from "react";
 import "./App.css";
+import Card from './components/cards/card'
 import logo from "./assets/logo ma.png";
 import me from "./assets/me.jpg";
 import { FaRegLightbulb, FaLightbulb, FaGithub, FaLinkedin  } from "react-icons/fa";
+import { IoIosArrowDropdownCircle } from "react-icons/io";
+import rwa from "./assets/Rwa.png"
+import gf from "./assets/gfimpports.png"
+import pf from "./assets/porfoliomae.png"
+
 
 
 function App() {
@@ -57,7 +63,7 @@ function App() {
                 <a href="#talkMe"
                    style={{color: lightOn ? "black" : "white"}}
                 >
-                  Fale <span className="secondary-color">comigo</span>
+                  Fale <span style={{color: "rgb(188, 17, 17)"}}>comigo</span>
                 </a>
               </li>
               
@@ -79,7 +85,7 @@ function App() {
       </header>
 
       <main>
-          <div id="home">
+          <div id="home" style={{position: "relative"}}>
             <div className="container">
               <section className="text-wrapper">
                   <span
@@ -103,7 +109,7 @@ function App() {
                       </button>
 
                       <button id="button_curriculum">
-                        <a id="curriculum" href="https://www.canva.com/design/DAFcwM_WAcg/6w015JCe-npnIDy-OVG62A/view?utm_content=DAFcwM_WAcg&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">
+                        <a id="curriculum" href="https://www.canva.com/design/DAFcwM_WAcg/6w015JCe-npnIDy-OVG62A/view?utm_content=DAFcwM_WAcg&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" target="_blank">
                             Ver Currículo
                         </a>
                       </button>
@@ -128,9 +134,47 @@ function App() {
                   </div>
               </section>
 
-              <img src={me}  alt="foto principal"/>
-
+              <img src={me} id="myPicture"  alt="foto principal"/>
             </div>
+
+            <a href="#projects" >
+              <IoIosArrowDropdownCircle 
+                className="arrowBottom"
+                fontSize={"40px"}
+                style={{border: "none", borderRadius: "50%", color: " rgb(132, 14, 14)", padding: "20px", left: "1rem", bottom: "1rem", position: "absolute", cursor: "pointer"}}
+              />
+            </a>
+          </div>
+
+          <div id="projects">
+              <h1 style={{color: lightOn ? "black" : "white"}}>Meus <span className="secondary-color">Projetos</span></h1>
+
+            <div className="cards-container">
+              <Card
+                imageUrl={rwa}  
+                title={"Rwa Suplementos"} 
+                description={"Descubra qualidade e facilidade em nossa loja virtual. Em breve, com o upgrade para React JS, ofereceremos uma experiência ainda mais envolvente para sua jornada de saúde."}
+                light={lightOn}
+                />
+
+              <Card
+                imageUrl={gf}  
+                title={"Gf Impports"} 
+                description={"Um e-commerce intuitivo para facilitar a aquisição de eletrônicos. Em constante evolução, prometemos uma experiência digital ainda mais sofisticada para sua jornada de descobertas tecnológicas."}
+                light={lightOn}
+                /> 
+                           
+              <Card
+                imageUrl={pf}
+                title={"Portfólio Fernanda Amaral"} 
+                description={" Explore o portfólio nutricional, uma experiência online que visa inspirar hábitos saudáveis e oferecer informações valiosas sobre nutrição."}
+                light={lightOn}
+              />    
+            </div>
+          </div>
+
+          <div id="carrer">
+            <h1 style={{color: lightOn ? "black" : "white"}}>Minha <span className="secondary-color">Carreira</span></h1>
           </div>
       </main>
 
