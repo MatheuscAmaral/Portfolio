@@ -152,17 +152,18 @@ function App() {
             <div className="cards-container">
               <Card
                 imageUrl={rwa}  
-                title={"Rwa Suplementos"} 
+                title={"Rwa"} 
+                subTitle={"Suplementos"}
                 description={"Descubra qualidade e facilidade em nossa loja virtual. Em breve, com o upgrade para React JS, ofereceremos uma experiência ainda mais envolvente para sua jornada de saúde."}
                 light={lightOn}
-                />
+              />
 
               <Card
                 imageUrl={gf}  
                 title={"Gf Impports"} 
                 description={"Um e-commerce intuitivo para facilitar a aquisição de eletrônicos. Em constante evolução, prometemos uma experiência digital ainda mais sofisticada para sua jornada de descobertas tecnológicas."}
                 light={lightOn}
-                /> 
+              /> 
                            
               <Card
                 imageUrl={pf}

@@ -195,7 +195,22 @@ li > a {
 
 .cards-container {
     display: grid;
-    grid-template-columns: repeat(3, .2fr);
+    grid-template-rows: repeat(3, .2fr);
     gap: 2rem;
     justify-content: center;
+}
+
+.icons_button {
+    border: 0;
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+}
+
+.icons {
+    transition: 0.6s;
+}
+
+.icons a:hover {
+    box-shadow: 0px 0px 2px 0px gray;
 }
