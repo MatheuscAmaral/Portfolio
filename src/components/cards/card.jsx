@@ -2,34 +2,34 @@ import React from "react";
 import {FaGithub} from "react-icons/fa";
 import { CgWebsite } from "react-icons/cg";
 
-function Card({imageUrl, title, subTitle, description, light}) {
+function Card({imageUrl, title, subTitle, description, light, deploy, github, invert}) {
     return (
-        <div className="card" style={{display: "flex", width: "100%", border: "0"}}>
+        <div className="card" style={{display: "flex", flexDirection: invert == "no" ? "row" : "row-reverse", alignItems: "center", width: "100%", border: "0", gap: "4rem"}}>
             <img 
                 src={imageUrl}
-                style={{width: "450px", borderRadius: "8px", boxShadow: "0px 0px 1px 0px gray"}}
+                style={{width: "550px", borderRadius: "8px",}}
             />
 
-            <div className="card-content" style={{textAlign: "center", padding: "0px 40px 40px 40px", width: "300px", wordWrap: "break-word", height: "160px"}}>
-                <h3 style={{color: light ? "black" : "white", fontSize: "18px", fontWeight: "500"}}>
+            <div className="card-content" style={{textAlign: "center", padding: "0px 40px 40px 40px", width: "350px", wordWrap: "break-word", height: "160px"}}>
+                <h3 style={{color: light ? "black" : "white", fontSize: "22px", fontWeight: "500"}}>
                     {title} <span className="secondary-color">{subTitle}</span>
                 </h3>
-                <span style={{color: light ? "black" : "white", fontSize: "12px"}}>
+                <span style={{color: light ? "black" : "white", fontSize: "14x"}}>
                     {description}
                 </span>
 
                 <div className="icons">
-                    <a className="icons_button" href="#">
+                    <a className="icons_button" href={deploy} target="_blank">
                         <CgWebsite
                             className="secondary-color"
-                            style={{fontSize: "22px"}}
+                            style={{fontSize: "25px"}}
                         />
                     </a>
 
-                    <a className="icons_button" href="#">
+                    <a className="icons_button" href={github} target="_blank">
                         <FaGithub
                              className="secondary-color"
-                             style={{fontSize: "20px"}}
+                             style={{fontSize: "21px"}}
                         />
                     </a>
                 </div>
