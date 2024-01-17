@@ -68,6 +68,12 @@ main {
     grid-column: 1/4;
 }
 
+footer {
+    grid-column: 1/4;
+    width: 100%;
+    text-align: center;
+}
+
 nav > ul {
     list-style: none;
     display: flex;
@@ -198,7 +204,7 @@ li > a {
     color: var(--secondary-color-hover);
 }
 
-#projects, #carrer {
+#projects, #carrer, #skills, #talkMe {
     display: flex;
     flex-direction: column;
     gap: 5rem;
@@ -207,15 +213,16 @@ li > a {
     padding: 100px 0px;
 }
 
-#projects > h1, #carrer > h1 {
+#projects > h1, #carrer > h1, #skills > h1, #talkMe > h1 {
     font-size: 40px;
     font-weight: 600;
 }
 
+
 .cards-container {
     display: grid;
     grid-template-rows: repeat(3, .2fr);
-    gap: 20rem;
+    gap: rem;
     justify-content: center;
 }
 
@@ -238,17 +245,57 @@ li > a {
     box-shadow: 0px 0px 2px 0px gray;
 }
 
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(10, .1fr);
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-container-card {
+    border: 1.8px dashed var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 5px 20px;
+}
+
+.row {
+    display: flex;
+    gap: 1rem;
+}
+
+
+.icons_talk {
+    border: 0;
+    background-color: var(--secondary-color);
+    padding: 6px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 @keyframes inicializatedNav {
     0% {
         opacity: 0;
         transform: translateY(-500px);
     }
-
+    
     100% {
         opacity: 1;
     }
 }
 
+.in-view {
+    animation: inicializatedMain 1s alternate;
+    font-size: 40px;
+    font-weight: 600;
+}
+  
 @keyframes inicializatedMain {
     0% {
         opacity: 0;

@@ -1,18 +1,33 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import Card from './components/cards/card'
+import Skill from "./components/skills/skill";
+import Footer from "./components/footer/footer";
 import logo from "./assets/logo ma.png";
 import me from "./assets/me.jpg";
-import { FaRegLightbulb, FaLightbulb, FaGithub, FaLinkedin  } from "react-icons/fa";
+import { FaRegLightbulb, FaLightbulb, FaGithub, FaLinkedin, FaReact, FaNode, FaGitAlt, FaRegCopyright } from "react-icons/fa";
+import { FaLocationCrosshairs } from "react-icons/fa6";
+import { DiJavascript1 } from "react-icons/di";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
+import { PiFileCssBold, PiFileHtmlBold  } from "react-icons/pi";
+import { TbFileTypeSql } from "react-icons/tb";
+import { RiBootstrapLine } from "react-icons/ri";
+import { DiJqueryLogo } from "react-icons/di";
+import { BsFillTelephoneFill, BsMailbox2 } from "react-icons/bs";
 import rwa from "./assets/Rwa.png"
 import gf from "./assets/gfimpports.png"
 import pf from "./assets/porfoliomae.png"
+import { useInView } from 'react-intersection-observer';
 
 
 function App() {
   const [lightOn, setLightOn] = useState(true);
-
+  const [ref, inView] = useInView({
+    triggerOnce: true, 
+    rootMargin: "-50px 0px", 
+  });
+  
+  
   
   function setLightState() {
     if(lightOn == true) {
@@ -55,7 +70,7 @@ function App() {
               </li>
 
               <li style={{"--time": "0.7s"}}>
-                <a href="#abilities"
+                <a href="#skills"
                    style={{color: lightOn ? "black" : "white"}}
                 >
                   Habilidades
@@ -163,7 +178,11 @@ function App() {
           </div>
 
           <div id="projects">
-              <h1 style={{color: lightOn ? "black" : "white"}}>Meus <span className="secondary-color">Projetos</span></h1>
+            <h1 ref={ref} className={inView ? 'in-view' : ''} style={{ color: lightOn ? 'black' : 'white' }}>
+              Meus <span className="secondary-color">Projetos</span>
+            </h1>
+
+
 
             <div className="cards-container">
               <Card
@@ -205,8 +224,78 @@ function App() {
             <h1 style={{color: lightOn ? "black" : "white"}}>Minha <span className="secondary-color">Carreira</span></h1>
 
           </div>
+
+          <div id="skills">
+            <h1 style={{color: lightOn ? "black" : "white"}}>Minhas <span className="secondary-color">Habilidades</span></h1>
+
+            <div className="skills-container">
+              <Skill
+                icon={<PiFileHtmlBold />}
+              />
+              <Skill
+                icon={<PiFileCssBold/>}
+              />
+              <Skill
+                icon={<FaReact />}
+              />
+              <Skill
+                icon={<DiJavascript1/>}
+              />
+              <Skill
+                icon={<FaNode />}
+              />
+              <Skill
+                icon={<DiJqueryLogo/>}
+              />
+              <Skill
+                icon={<FaGitAlt/>}
+              />
+              <Skill
+                icon={<RiBootstrapLine />}
+              />
+              <Skill
+                icon={<TbFileTypeSql  />}
+              />
+              
+            </div>
+          </div>
+
+          <div id="talkMe">
+            <h1 style={{color: lightOn ? "black" : "white"}}>Fale <span className="secondary-color">comigo</span></h1>
+
+            <div className="row">
+                <a className="icons_talk" href={"#"} target="_blank">
+                  <BsFillTelephoneFill 
+                    fontSize={"15px"}
+                    style={{color: "white"}}
+                  />
+                </a>
+
+                <a className="icons_talk" href={"#"} target="_blank">
+                  <BsMailbox2 
+                    fontSize={"15px"}
+                    style={{color: "white"}}
+                  />
+                </a>
+
+                <a className="icons_talk" href={"#"} target="_blank">
+                  <FaLocationCrosshairs 
+                    fontSize={"15px"}
+                    style={{color: "white"}}                  
+                  />
+                </a>
+
+            </div>
+          </div>
       </main>
 
+      <footer>
+        <div className="footer">
+          <Footer
+            icon={<FaRegCopyright /> }
+          />
+        </div>
+      </footer>
     </div>
   )
 }
