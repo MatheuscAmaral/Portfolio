@@ -1,10 +1,7 @@
+function Carrer() {
+  return (
+    <h1></h1>
+  )
+}
 
-  
-  function Carrer() {
-    return (
-      <h1>teste</h1>
-    )
-  }
-
-
-  export default Carrer
+export default Carrer

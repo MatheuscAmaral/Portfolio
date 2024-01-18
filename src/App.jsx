@@ -164,9 +164,9 @@ function App() {
               />
             </div>
 
-            <a href="#projects" >
+            <a href="#projects">
               <IoIosArrowDropdownCircle 
-                className="arrowBottom"
+                className="arrowButton"
                 fontSize={"40px"}
                 style={{border: "none", borderRadius: "50%", color: " rgb(132, 14, 14)", padding: "20px", left: "1rem", bottom: "1rem", position: "absolute", cursor: "pointer"}}
               />
@@ -220,7 +220,7 @@ function App() {
             <Carrer/>
           </div>
 
-          <div id="skills">
+          <div id="skills" style={{paddingBottom: "200px"}}>
             <h1 style={{color: lightOn ? "black" : "white"}}>Minhas <span className="secondary-color">Habilidades</span></h1>
 
             <div className="skills-container" style={{color: lightOn ? "black" : "white"}}>
@@ -255,7 +255,7 @@ function App() {
             </div>
           </div>
 
-          <div id="talkMe">
+          <div id="talkMe" style={{paddingBottom: "200px"}}>
             <h1 style={{color: lightOn ? "black" : "white"}}>Fale <span className="secondary-color">comigo</span></h1>
 
             <div className="row">

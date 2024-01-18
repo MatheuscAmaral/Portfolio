@@ -8,7 +8,6 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
     user-select: none;
 }
 
@@ -26,6 +25,7 @@ body {
     "main main main"
     "footer footer footer";
     gap: 3rem;
+    font-family: 'Poppins', sans-serif;
 }
 
 #logo img {
@@ -180,12 +180,13 @@ li > a {
     animation: inicializatedMain var(--time) alternate;
 }
 
-#linkedin, #gitHub {
+
+#linkedin, #gitHub, .arrowButton a{
     cursor: pointer;
     transition: 0.3s;
 }
 
-#linkedin:hover, #gitHub:hover, .arrowBottom:hover {
+#linkedin:hover, #gitHub:hover, .arrowButton:hover {
     color: var(--secondary-color-hover);
     transform: scale(1.05);
 }
@@ -285,6 +286,7 @@ li > a {
     justify-content: center;
     align-items: center;
 }
+
 
 @keyframes inicializatedNav {
     0% {

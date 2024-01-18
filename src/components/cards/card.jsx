@@ -11,10 +11,10 @@ function Card({imageUrl, title, subTitle, description, light, deploy, github, in
             />
 
             <div className="card-content" style={{textAlign: "center", padding: "0px 40px 40px 40px", width: "350px", wordWrap: "break-word", height: "160px"}}>
-                <h3 style={{color: light ? "black" : "white", fontSize: "22px", fontWeight: "500"}}>
+                <h3 style={{color: light ? "black" : "white", fontSize: "22px", fontWeight: "500", marginBottom: "20px"}}>
                     {title} <span className="secondary-color">{subTitle}</span>
                 </h3>
-                <span style={{color: light ? "black" : "white", fontSize: "14x"}}>
+                <span style={{color: light ? "black" : "white"}}>
                     {description}
                 </span>
 
