@@ -214,6 +214,7 @@ li > a {
 }
 
 #projects > h1, #carrer > h1, #skills > h1, #talkMe > h1 {
+    animation: inicializatedMain 1s alternate;
     font-size: 40px;
     font-weight: 600;
 }
@@ -222,7 +223,7 @@ li > a {
 .cards-container {
     display: grid;
     grid-template-rows: repeat(3, .2fr);
-    gap: rem;
+    gap: 8rem;
     justify-content: center;
 }
 
@@ -267,7 +268,6 @@ li > a {
     gap: 1rem;
 }
 
-
 .icons_talk {
     border: 0;
     background-color: var(--secondary-color);
@@ -278,6 +278,13 @@ li > a {
     align-items: center;
 }
 
+.column_icons {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: center;
+}
 
 @keyframes inicializatedNav {
     0% {
@@ -288,12 +295,6 @@ li > a {
     100% {
         opacity: 1;
     }
-}
-
-.in-view {
-    animation: inicializatedMain 1s alternate;
-    font-size: 40px;
-    font-weight: 600;
 }
   
 @keyframes inicializatedMain {
