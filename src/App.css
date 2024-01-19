@@ -266,6 +266,7 @@ li > a {
 
 .row {
     display: flex;
+    margin-left: 300px;
     gap: 1rem;
 }
 
@@ -282,9 +283,8 @@ li > a {
 .column_icons {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
-    justify-content: center;
-    align-items: center;
+    gap: 2rem;
+    align-items: start;
 }
 
 

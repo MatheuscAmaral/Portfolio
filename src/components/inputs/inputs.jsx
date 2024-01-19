@@ -17,7 +17,7 @@ function Inputs() {
             </InputGroup>
             <Textarea 
                 placeholder='Digite sua mensagem aqui...' 
-                style={{width: "100%", height: "130px", backgroundColor: 'transparent'}}
+                style={{width: "100%", height: "160px", backgroundColor: 'transparent'}}
             />
         </Stack>
     )

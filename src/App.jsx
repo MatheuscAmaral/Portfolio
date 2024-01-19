@@ -5,8 +5,11 @@ import Skill from "./components/skills/skill";
 import Footer from "./components/footer/footer";
 import Inputs from "./components/inputs/inputs";
 import Carrer from "./components/carrer/carrer";
+// import Button from "./components/button/button";
 import logo from "./assets/logo ma.png";
 import me from "./assets/me.jpg";
+import {Box,  Button,  SlideFade, useDisclosure} from '@chakra-ui/react'
+
 import { FaRegLightbulb, FaLightbulb, FaGithub, FaLinkedin, FaReact, FaNode, FaGitAlt, FaRegCopyright } from "react-icons/fa";
 import { FaLocationCrosshairs } from "react-icons/fa6";
 import { DiJavascript1 } from "react-icons/di";
@@ -24,6 +27,7 @@ import pf from "./assets/porfoliomae.png"
 
 function App() {
   const [lightOn, setLightOn] = useState(true);
+  const { isOpen, onToggle } = useDisclosure();
 
   function setLightState() {
     if(lightOn == true) {
@@ -35,7 +39,7 @@ function App() {
 
   return (
     <div id="page"
-    style={{backgroundColor: lightOn ? "rgb(250, 250, 250)" : "#020114"}}>
+      style={{backgroundColor: lightOn ? "rgb(250, 250, 250)" : "#020114"}}>
       <header className="navbar">
         <div id="logo">
          <a href="#home">
@@ -259,30 +263,73 @@ function App() {
             <h1 style={{color: lightOn ? "black" : "white"}}>Fale <span className="secondary-color">comigo</span></h1>
 
             <div className="row">
-                <Inputs/>
+                <div style={{display: 'flex', flexDirection: 'column', gap: '1rem'}}>
+                  <Inputs/>
+                  <button className="secondary-color-background" style={{width: '20%', padding: '8px', borderRadius: '5px', color: 'white', fontSize: '12px'}}>Enviar mensagem</button>
+                </div>
 
                 <div className="column_icons">
-                  
-                  <a className="icons_talk" href={"#"} target="_blank">
-                    <BsFillTelephoneFill 
-                      fontSize={"15px"}
-                      style={{color: "white"}}
-                    />
-                  </a>
+                  {/* <Button/> */}
+                  <div style={{display: "flex", alignItems: "center", justifyContent: "center", gap: "1rem"}}> 
+                   <Button borderRadius={"50%"} padding={"0px"} backgroundColor={"#840e0e"} onMouseEnter={onToggle} onMouseLeave={onToggle} _hover={{backgroundColor: 'red'}}>
+                      <BsFillTelephoneFill 
+                        fontSize={"15px"}
+                        style={{color: "white"}}
+                      />
+                    </Button>
+                    <SlideFade in={isOpen} offsetY='20px'>
+                      <Box
+                        p='0px'
+                        color='black'
+                        rounded='md'
+                        fontSize='13px'
+                      >
+                        <h5 style={{color: "light-gray", paddingLeft: "2px"}}>Me ligue</h5>
+                        <p>(31) 99266-1386</p>
+                      </Box>
+                    </SlideFade>
+                  </div>
 
-                  <a className="icons_talk" href={"#"} target="_blank">
-                    <BsMailbox2 
-                      fontSize={"15px"}
-                      style={{color: "white"}}
-                    />
-                  </a>
+                  <div style={{display: "flex", alignItems: "center", justifyContent: "center", gap: "1rem"}}> 
+                   <Button borderRadius={"50%"} padding={"0px"} backgroundColor={"#840e0e"} onMouseEnter={onToggle} onMouseLeave={onToggle} _hover={{backgroundColor: 'red'}}>
+                      <BsMailbox2 
+                        fontSize={"15px"}
+                        style={{color: "white"}}
+                      />
+                    </Button>
+                    <SlideFade in={isOpen} offsetY='20px'>
+                      <Box
+                        p='0px'
+                        color='black'
+                        rounded='md'
+                        fontSize='13px'
+                      >
+                        <h5 style={{color: "light-gray", paddingLeft: "2px"}}>E-mail:</h5>
+                        <p>matheuscamposdoamaral15@gmail.com</p>
+                      </Box>
+                    </SlideFade>
+                  </div>
 
-                  <a className="icons_talk" href={"#"} target="_blank">
-                    <FaLocationCrosshairs 
-                      fontSize={"15px"}
-                      style={{color: "white"}}                  
-                    />
-                  </a>
+                  <div style={{display: "flex", alignItems: "center", justifyContent: "center", gap: "1rem"}}> 
+                   <Button borderRadius={"50%"} padding={"0px"} backgroundColor={"#840e0e"} onMouseEnter={onToggle} onMouseLeave={onToggle} _hover={{backgroundColor: 'red'}}>
+                      <FaLocationCrosshairs 
+                        fontSize={"15px"}
+                        style={{color: "white"}}                  
+                      />
+                    </Button>
+                    <SlideFade in={isOpen} offsetY='20px'>
+                      <Box
+                        p='0px'
+                        color='black'
+                        rounded='md'
+                        fontSize='13px'
+                      >
+                        <h5 style={{color: "light-gray", paddingLeft: "2px"}}>Localização:</h5>
+                        <p>Contagem - MG</p>
+                      </Box>
+                    </SlideFade>
+                  </div>
+
                 </div>
             </div>
           </div>
