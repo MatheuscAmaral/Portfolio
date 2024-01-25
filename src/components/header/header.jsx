@@ -5,7 +5,7 @@ import { FaBarsStaggered, FaLightbulb, FaRegLightbulb } from "react-icons/fa6";
 import { CloseButton, Stack } from '@chakra-ui/react'
 
 
-export default function Header({ light }) {
+export default function Header({ light, logo }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
@@ -13,7 +13,7 @@ export default function Header({ light }) {
       <nav className="mx-auto flex max-w-8xl items-center justify-between px-5 lg:px-52" aria-label="Global">
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
-            <img className="h-12 w-auto" src="/src/assets/logoMA.png" alt="Logo ma"/>
+            <img className="h-12 w-auto" src={logo} alt="Logo ma"/>
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -76,7 +76,7 @@ export default function Header({ light }) {
             <a href="#" className="-m-1.5 p-1.5">
               <img
                 className="h-8 w-auto"
-                src="/src/assets/logoMA.png"
+                src={logo}
                 alt=""
               />
             </a>

@@ -23,6 +23,7 @@ import { motion } from "framer-motion"
 import rwa from "./assets/Rwa.png"
 import gf from "./assets/gfimpports.png"
 import pf from "./assets/porfoliomae.png"
+import logo from './assets/logoMA.png'
 
 
 function App() {
@@ -47,7 +48,7 @@ function App() {
   return (
     <div id="page">
       <main>
-          <Header light={lightOn}/>
+          <Header light={lightOn} logo={logo}/>
           <div id="home" style={{position: "relative", marginTop: "100px"}}>
             <div className="container flex place-content-evenly items-center ">
               <section className="text-wrapper flex flex-col gap-3 justify-center items-center md:justify-start md:items-start">
