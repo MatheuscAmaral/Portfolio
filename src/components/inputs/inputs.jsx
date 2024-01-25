@@ -2,7 +2,7 @@ import { InputGroup, Input, Stack, Textarea } from '@chakra-ui/react'
 
 function Inputs() {
     return(
-        <Stack spacing={1} className='w-[400px] md:w-[700px]'>
+        <Stack spacing={1} className='w-[350px] md:w-[700px]'>
             <InputGroup gap={1}>
                 <Input 
                     type='name' 
