@@ -126,7 +126,7 @@ function App() {
           </div>
 
           <div id="projects">
-            <h1 style={{ color: lightOn ? 'black' : 'white' }} className="text-3xl">
+            <h1 style={{ color: lightOn ? 'black' : 'white' }} className="text-3xl md:text-4xl">
               Meus <span className="secondary-color">Projetos</span>
             </h1>
 
@@ -167,13 +167,13 @@ function App() {
           </div>
 
           <div id="carrer">
-            <h1 className="text-3xl" style={{color: lightOn ? "black" : "white"}}>Minha <span className="secondary-color">Carreira</span></h1>
+            <h1 className="text-3xl md:text-4xl" style={{color: lightOn ? "black" : "white"}}>Minha <span className="secondary-color">Carreira</span></h1>
 
             {/* <Carrer/> */}
           </div>
 
           <div id="skills" style={{paddingBottom: "200px"}}>
-            <h1 className="text-3xl" style={{color: lightOn ? "black" : "white"}}>Minhas <span className="secondary-color">Habilidades</span></h1>
+            <h1 className="text-3xl md:text-4xl" style={{color: lightOn ? "black" : "white"}}>Minhas <span className="secondary-color">Habilidades</span></h1>
 
             <div className="skills-container" style={{color: lightOn ? "black" : "white"}}>
               <Skill
@@ -208,7 +208,7 @@ function App() {
           </div>
 
           <div id="talkMe" style={{paddingBottom: "200px"}}>
-            <h1 className="text-3xl" style={{color: lightOn ? "black" : "white"}}>Fale <span className="secondary-color">comigo</span></h1>
+            <h1 className="text-3xl md:text-4xl" style={{color: lightOn ? "black" : "white"}}>Fale <span className="secondary-color">comigo</span></h1>
 
             <div className='flex items-center flex-col gap-2'>
                 <div className='flex gap-2'>
