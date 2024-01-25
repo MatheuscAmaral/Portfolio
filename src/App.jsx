@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Card from './components/cards/card'
 import Skill from "./pages/skill";
@@ -7,10 +7,9 @@ import Inputs from "./components/inputs/inputs";
 import Carrer from "./pages/carrer";
 import RadioCard from "./components/radio/radio";
 // import Button from "./components/button/button";
-import logo from "./assets/logo ma.png";
 import me from "./assets/me.jpg";
 import {Box,  Button,  SlideFade, useDisclosure} from '@chakra-ui/react'
-
+import Header from "./components/header/header";
 import { FaRegLightbulb, FaLightbulb, FaGithub, FaLinkedin, FaReact, FaNode, FaGitAlt, FaRegCopyright } from "react-icons/fa";
 import { FaLocationCrosshairs } from "react-icons/fa6";
 import { DiJavascript1 } from "react-icons/di";
@@ -30,6 +29,12 @@ function App() {
   const [lightOn, setLightOn] = useState(true);
   const { isOpen, onToggle } = useDisclosure();
   const [selectedValue, setSelectedValue] = React.useState('Whatsapp');
+  const bodyElement = document.querySelector('body');
+
+  
+  useEffect(() => {
+      bodyElement.style.backgroundColor = lightOn ? "rgb(250, 250, 250)" : "#020114";
+  }, [lightOn]);
 
   function setLightState() {
     if(lightOn == true) {
@@ -40,143 +45,83 @@ function App() {
   }
 
   return (
-    <div id="page"
-      style={{backgroundColor: lightOn ? "rgb(250, 250, 250)" : "#020114"}}>
-      <header className="navbar">
-        <div id="logo">
-         <a href="#home">
-          <img 
-            src={logo} alt="logo" 
-            style={{"--time": "0.5s"}} 
-            width={"75px"}
-          />
-         </a>
-        </div>
-
-        <nav>
-            <ul>
-              <li style={{"--time": "0.5s"}}>
-                <a href="#projects"
-                  style={{color: lightOn ? "black" : "white"}}
-                >
-                  Projetos
-                </a>
-              </li>
-
-              <li style={{"--time": "0.6s"}}>
-                <a href="#carrer"
-                   style={{color: lightOn ? "black" : "white"}}
-                >
-                  Carreira
-                </a>                
-              </li>
-
-              <li style={{"--time": "0.7s"}}>
-                <a href="#skills"
-                   style={{color: lightOn ? "black" : "white"}}
-                >
-                  Habilidades
-                </a>
-              </li>
-
-              <li style={{"--time": "0.8s"}}>
-                <a href="#talkMe"
-                   style={{color: lightOn ? "black" : "white"}}
-                >
-                  Fale <span style={{color: "rgb(188, 17, 17)"}}>comigo</span>
-                </a>
-              </li>
-              
-              <li style={{"--time": "0.9s"}}>
-                <FaLightbulb 
-                  fontSize={"20px"}
-                  onClick={setLightState}
-                  style={{display: lightOn ? "block" : "none", cursor: "pointer"}}
-    
-                />
-
-                <FaRegLightbulb 
-                  fontSize={"20px"} 
-                  onClick={setLightState}
-                  style={{display: lightOn ? "none" : "block", cursor: "pointer", color: "white"}}
-                />
-              </li>
-            </ul>
-        </nav>
-      </header>
-
+    <div id="page">
       <main>
-          <div id="home" style={{position: "relative"}}>
-            <div className="container">
-              <section className="text-wrapper">
-                  <span
-                     style={{color: lightOn ? "black" : "white", "--time": "0.7s"}}
-                  >
-                    Olá, me chamo
-                  </span>
+          <Header light={lightOn}/>
+          <div id="home" style={{position: "relative", marginTop: "100px"}}>
+            <div className="container flex place-content-evenly items-center ">
+              <section className="text-wrapper flex flex-col gap-3 justify-center items-center md:justify-start md:items-start">
+                    <span
+                      style={{color: lightOn ? "black" : "white", "--time": "0.7s"}}
+                      className="text-xl"
+                    >
+                      Olá, me chamo
+                    </span>
 
-                  <span
-                     style={{color: lightOn ? "black" : "white", "--time": "0.8s"}}
-                  >
-                    Matheus <span className="secondary-color">Amaral</span>
-                  </span>
-                  
-                  <span 
-                    className="secondary-color"
-                    id="work"
-                    style={{"--time": "0.9s"}}
-                  >
-                    Front-end Developer
-                  </span>
+                    <span
+                      style={{color: lightOn ? "black" : "white", "--time": "0.8s"}}
+                      className="text-5xl md:text-6xl font-semibold"
+                    >
+                      Matheus <span className="secondary-color">Amaral</span>
+                    </span>
+                    
+                    <span 
+                      className="secondary-color text-xl"
+                      id="work"
+                      style={{"--time": "0.9s"}}
+                    >
+                      Front-end Developer
+                    </span>
 
-                  <div className="buttons">
-                      <button id="button_talkMe" style={{"--time": "1s"}}>
-                        <a href="#talkMe">
-                          Me contate
-                        </a>
-                      </button>
+                    <div className="buttons">
+                        <button id="button_talkMe" style={{"--time": "1s"}}>
+                          <a href="#talkMe">
+                            Me contate
+                          </a>
+                        </button>
 
-                      <button id="button_curriculum" style={{"--time": "1s"}}>
-                        <a id="curriculum" href="https://www.canva.com/design/DAFcwM_WAcg/6w015JCe-npnIDy-OVG62A/view?utm_content=DAFcwM_WAcg&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" target="_blank">
-                            Ver Currículo
-                        </a>
-                      </button>
-                  </div>
+                        <button id="button_curriculum" style={{"--time": "1s"}}>
+                          <a id="curriculum" href="https://www.canva.com/design/DAFcwM_WAcg/6w015JCe-npnIDy-OVG62A/view?utm_content=DAFcwM_WAcg&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" target="_blank">
+                              Ver Currículo
+                          </a>
+                        </button>
+                    </div>
 
-                  <div className="icons_home">
-                    <a href="https://github.com/MatheuscAmaral" target="_blank" style={{"--time": "1.1s"}}>
-                      <FaGithub 
-                        id="gitHub"
-                        className="secondary-color"
-                        fontSize={"35px"}
-                      />
-                    </a>
+                    <div className="icons_home">
+                      <a href="https://github.com/MatheuscAmaral" target="_blank" style={{"--time": "1.1s"}}>
+                        <FaGithub 
+                          id="gitHub"
+                          className="secondary-color"
+                          fontSize={"35px"}
+                        />
+                      </a>
 
-                    <a href="https://www.linkedin.com/in/matheus-amaral-00762b265/" style={{"--time": "1.1s"}}>
-                      <FaLinkedin
-                        id="linkedin"
-                        className="secondary-color"
-                        fontSize={"35px"}
-                      />
-                    </a>
-                  </div>
-              </section>
+                      <a href="https://www.linkedin.com/in/matheus-amaral-00762b265/" style={{"--time": "1.1s"}}>
+                        <FaLinkedin
+                          id="linkedin"
+                          className="secondary-color"
+                          fontSize={"35px"}
+                        />
+                      </a>
+                    </div>
+                </section>
 
-              <img 
-                src={me} 
-                id="myPicture"  
-                alt="foto principal"
-                style={{"--time": "2.3s"}}
-              />
+                <img 
+                  src={me} 
+                  id="myPicture"  
+                  alt="foto principal"
+                  style={{"--time": "2.3s"}}
+                  className="hidden md:block"
+                />
             </div>
 
-            <a href="#projects">
-              <IoIosArrowDropdownCircle 
-                className="arrowButton"
-                fontSize={"40px"}
-                style={{border: "none", borderRadius: "50%", color: " rgb(132, 14, 14)", padding: "20px", left: "1rem", bottom: "1rem", position: "absolute", cursor: "pointer"}}
-              />
-            </a>
+              <a href="#projects">
+                <IoIosArrowDropdownCircle 
+                  className="arrowButton"
+                  fontSize={"40px"}
+                  style={{border: "none", borderRadius: "50%", color: " rgb(132, 14, 14)", padding: "20px", left: "1rem", bottom: "1rem", position: "absolute", cursor: "pointer"}}
+                />
+              </a>
           </div>
 
           <div id="projects">
@@ -270,13 +215,13 @@ function App() {
                 </div>
             </div>
 
-            <div className="row">
+            <div className="content_talk flex justify-center gap-5">
                 <div style={{display: 'flex', flexDirection: 'column', gap: '1rem'}}>
                   <Inputs/>
-                  <button className="secondary-color-background" style={{width: '20%', padding: '8px', borderRadius: '5px', color: 'white', fontSize: '12px'}}>Enviar mensagem</button>
+                  <button className="secondary-color-background w-52" style={{padding: '8px', borderRadius: '5px', color: 'white', fontSize: '12px'}}>Enviar mensagem</button>
                 </div>
 
-                <div className="column_icons">
+                <div className="hidden md:flex md:flex-col md:gap-10 md:items-start md:justify-start">
                   {/* <Button/> */}
                   <div style={{display: "flex", alignItems: "center", justifyContent: "center", gap: "1rem"}}> 
                    <Button borderRadius={"50%"} padding={"0px"} backgroundColor={"#840e0e"} onMouseEnter={onToggle} onMouseLeave={onToggle} _hover={{backgroundColor: 'red'}}>
@@ -344,12 +289,10 @@ function App() {
       </main>
 
       <footer>
-        <div className="footer">
           <Footer
             icon={<FaRegCopyright />}
             light={lightOn}
           />
-        </div>
       </footer>
     </div>
   )

@@ -2,17 +2,19 @@ import { InputGroup, Input, Stack, Textarea } from '@chakra-ui/react'
 
 function Inputs() {
     return(
-        <Stack spacing={1}>
+        <Stack spacing={1} className='w-[400px] md:w-[700px]'>
             <InputGroup gap={1}>
                 <Input 
                     type='name' 
-                    placeholder='Nome:' 
-                    style={{width: "400px", backgroundColor: 'transparent'}}
-                />
+                    placeholder='Nome:'
+                    className='w-full'
+                    style={{backgroundColor: 'transparent'}}
+                    />
                 <Input 
                     type='email' 
                     placeholder='E-mail' 
-                    style={{width: "400px", backgroundColor: 'transparent'}}
+                    className='w-full'
+                    style={{backgroundColor: 'transparent'}}
                 />
             </InputGroup>
             <Textarea 

@@ -4,7 +4,7 @@ import { CgWebsite } from "react-icons/cg";
 
 function Card({imageUrl, title, subTitle, description, light, deploy, github, invert}) {
     return (
-        <div className="card" style={{display: "flex", flexDirection: invert == "no" ? "row" : "row-reverse", alignItems: "center", width: "100%", border: "0", gap: "4rem"}}>
+        <div className={`card flex md:${invert === 'no' ? 'flex-row' : 'flex-row-reverse'} flex-col items-center w-full border-0 gap-10`}>
             <img 
                 src={imageUrl}
                 style={{width: "550px", borderRadius: "8px",}}
