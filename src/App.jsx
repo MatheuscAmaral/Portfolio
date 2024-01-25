@@ -1,10 +1,11 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Card from './components/cards/card'
-import Skill from "./components/skills/skill";
+import Skill from "./pages/skill";
 import Footer from "./components/footer/footer";
 import Inputs from "./components/inputs/inputs";
-import Carrer from "./components/carrer/carrer";
+import Carrer from "./pages/carrer";
+import RadioCard from "./components/radio/radio";
 // import Button from "./components/button/button";
 import logo from "./assets/logo ma.png";
 import me from "./assets/me.jpg";
@@ -28,6 +29,7 @@ import pf from "./assets/porfoliomae.png"
 function App() {
   const [lightOn, setLightOn] = useState(true);
   const { isOpen, onToggle } = useDisclosure();
+  const [selectedValue, setSelectedValue] = React.useState('Whatsapp');
 
   function setLightState() {
     if(lightOn == true) {
@@ -221,7 +223,7 @@ function App() {
           <div id="carrer">
             <h1 style={{color: lightOn ? "black" : "white"}}>Minha <span className="secondary-color">Carreira</span></h1>
 
-            <Carrer/>
+            {/* <Carrer/> */}
           </div>
 
           <div id="skills" style={{paddingBottom: "200px"}}>
@@ -262,6 +264,12 @@ function App() {
           <div id="talkMe" style={{paddingBottom: "200px"}}>
             <h1 style={{color: lightOn ? "black" : "white"}}>Fale <span className="secondary-color">comigo</span></h1>
 
+            <div className='flex items-center flex-col gap-2'>
+                <div className='flex gap-2'>
+                    <RadioCard setSelectedValue={setSelectedValue} />
+                </div>
+            </div>
+
             <div className="row">
                 <div style={{display: 'flex', flexDirection: 'column', gap: '1rem'}}>
                   <Inputs/>
@@ -280,7 +288,7 @@ function App() {
                     <SlideFade in={isOpen} offsetY='20px'>
                       <Box
                         p='0px'
-                        color='black'
+                        style={{color: lightOn ? "black" : "white"}}
                         rounded='md'
                         fontSize='13px'
                       >
@@ -300,7 +308,7 @@ function App() {
                     <SlideFade in={isOpen} offsetY='20px'>
                       <Box
                         p='0px'
-                        color='black'
+                        style={{color: lightOn ? "black" : "white"}}
                         rounded='md'
                         fontSize='13px'
                       >
@@ -320,7 +328,7 @@ function App() {
                     <SlideFade in={isOpen} offsetY='20px'>
                       <Box
                         p='0px'
-                        color='black'
+                        style={{color: lightOn ? "black" : "white"}}
                         rounded='md'
                         fontSize='13px'
                       >
@@ -338,7 +346,6 @@ function App() {
       <footer>
         <div className="footer">
           <Footer
-            style={{color: lightOn ? "black" : "white"}}
             icon={<FaRegCopyright />}
             light={lightOn}
           />
