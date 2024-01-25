@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Dialog, Popover } from '@headlessui/react'
 import { FaBarsStaggered, FaLightbulb, FaRegLightbulb } from "react-icons/fa6";
 import { CloseButton, Stack } from '@chakra-ui/react'
-import logo from "../../assets/logoma.png";
+import logo from "/src/assets/logoma.png";
 
 
 export default function Header({ light }) {
