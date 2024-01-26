@@ -28,28 +28,28 @@ export default function Header({ light, logo }) {
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
           <a href="#projects"
             style={{color: light ? "black" : "white"}}
-            className="text-sm font-sans font-semibold"
+            className="text-md font-medium"
             >
             Projetos
           </a>
 
           <a href="#carrer"
             style={{color: light ? "black" : "white"}}
-            className="text-sm font-sans font-semibold"
+            className="text-md font-medium"
             >
             Carreira
           </a>                
 
           <a href="#skills"
             style={{color: light ? "black" : "white"}}
-            className="text-sm font-sans font-semibold"
+            className="text-md font-medium"
             >
             Habilidades
           </a>
 
           <a href="#talkMe"
             style={{color: light ? "black" : "white"}}
-            className="text-sm font-sans font-semibold"
+            className="text-md font-medium"
           >
             Fale <span style={{color: "rgb(188, 17, 17)"}}>comigo</span>
           </a>
@@ -92,30 +92,29 @@ export default function Header({ light, logo }) {
           </div>
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="flex flex-col gap-5 space-y-2 py-6">
+              <div className="flex flex-col font-medium gap-5 space-y-2 py-6">
                 <a
                   href="#projects"
                   style={{color: light ? "black" : "white"}}
-                  
                 >
                   Projetos
                 </a>
                 <a
-                  href="#projects"
+                  href="#carrer"
                   style={{color: light ? "black" : "white"}}
                   
                 >
                   Carreira
                 </a>
                 <a
-                  href="#projects"
+                  href="#skills"
                   style={{color: light ? "black" : "white"}}
                   
                 >
                   Habilidades
                 </a>
                 <a
-                  href="#projects"
+                  href="#talkMe"
                   style={{color: light ? "black" : "white"}}
                   
                 >

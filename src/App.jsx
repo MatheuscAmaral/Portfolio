@@ -54,7 +54,7 @@ function App() {
               <section className="text-wrapper flex flex-col gap-3 justify-center items-center md:justify-start md:items-start">
                     <span
                       style={{color: lightOn ? "black" : "white", "--time": "0.7s"}}
-                      className="text-xl"
+                      className="text-xl font-medium"
                     >
                       Olá, me chamo
                     </span>
@@ -67,7 +67,7 @@ function App() {
                     </span>
                     
                     <span 
-                      className="secondary-color text-xl"
+                      className="secondary-color text-xl font-medium"
                       id="work"
                       style={{"--time": "0.9s"}}
                     >
