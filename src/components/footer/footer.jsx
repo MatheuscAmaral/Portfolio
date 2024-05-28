@@ -1,9 +1,13 @@
 import React from "react";
+import { useContext } from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { LightContext } from "../../contexts/LightContext";
 
-function Footer({icon, light}) {
+function Footer({icon}) {
+    const { light } = useContext(LightContext);
+
     return(
-        <div style={{width: "100%"}}>
+        <div style={{width: "100%", backgroundColor: light ? "white" : "#131111"}}>
             <hr style={{border: "1px dashed", borderColor: light ? "gray" : "white" , opacity: "0.2", marginBottom: "20px"}}/>
             <span className="flex justify-between"> 
                 <span></span>

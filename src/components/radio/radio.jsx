@@ -21,7 +21,7 @@ function RadioCard({ setSelectedValue }) {
     <RadioGroup onChange={handleRadioChange} value={value}>
       <Stack direction='row' className='relative'>
         {options.map((o) => (
-          <div>
+          <div key={o.id}>
             <Radio opacity={0} width={170} height={35} position={'absolute'} top={0} zIndex={10} key={o.text} value={o.text}></Radio>
             <button
               id={o.text}

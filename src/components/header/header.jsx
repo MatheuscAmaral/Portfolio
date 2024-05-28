@@ -3,10 +3,14 @@ import { useState } from 'react'
 import { Dialog, Popover } from '@headlessui/react'
 import { FaBarsStaggered, FaLightbulb, FaRegLightbulb } from "react-icons/fa6";
 import { CloseButton, Stack } from '@chakra-ui/react'
+import { useContext } from 'react';
+import { LightContext } from '../../contexts/LightContext';
+import { useEffect } from 'react';
 
 
-export default function Header({ light, logo }) {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+export default function Header({ logo }) {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { changeLightState, light } = useContext(LightContext);
 
   return (
     <header className='pt-10'>
@@ -56,14 +60,14 @@ export default function Header({ light, logo }) {
       
         <FaLightbulb 
           fontSize={"20px"}
-          // onClick={setLightState}
+          onClick={() => changeLightState(false)}
           style={{display: light ? "block" : "none", cursor: "pointer"}}
 
         />
 
         <FaRegLightbulb 
           fontSize={"20px"} 
-          // onClick={setLightState}
+          onClick={() => changeLightState(true)}
           style={{display: light ? "none" : "block", cursor: "pointer", color: "white"}}
         />
           
@@ -124,14 +128,14 @@ export default function Header({ light, logo }) {
       
                 <FaLightbulb 
                   fontSize={"20px"}
-                  // onClick={setLightState}
+                  onClick={() => changeLightState(false)}
                   style={{display: light ? "block" : "none", cursor: "pointer"}}
 
                 />
 
                 <FaRegLightbulb 
                   fontSize={"20px"} 
-                  // onClick={setLightState}
+                  onClick={() => changeLightState(true)}
                   style={{display: light ? "none" : "block", cursor: "pointer", color: "white"}}
                 />
               </div>

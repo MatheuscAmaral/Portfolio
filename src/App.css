@@ -11,6 +11,15 @@ body {
     user-select: none;
 }
 
+::-webkit-scrollbar {
+    width: 7px;
+    height: 12px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #840e0e;
+    border-radius: 2px;
+  }
 
 :root {
     --secondary-color: #840e0e;
@@ -45,9 +54,9 @@ body {
 }
 
 .container > img {
-    width: 320px;
+    width: 350px;
     border: 3px solid var(--secondary-color);
-    border-radius: 50%;
+    border-radius: 25%;
 }
 
 #myPicture {

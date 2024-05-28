@@ -5,62 +5,52 @@ import Skill from "./pages/skill";
 import Footer from "./components/footer/footer";
 import Inputs from "./components/inputs/inputs";
 import Carrer from "./pages/carrer";
+import { SiMysql } from "react-icons/si";
 import RadioCard from "./components/radio/radio";
 // import Button from "./components/button/button";
 import me from "./assets/me.jpg";
 import {Box,  Button,  SlideFade, useDisclosure} from '@chakra-ui/react'
 import Header from "./components/header/header";
-import { FaRegLightbulb, FaLightbulb, FaGithub, FaLinkedin, FaReact, FaNode, FaGitAlt, FaRegCopyright } from "react-icons/fa";
-import { FaLocationCrosshairs } from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaReact, FaNode, FaGitAlt, FaRegCopyright } from "react-icons/fa";
+import { FaLocationCrosshairs, FaPhp } from "react-icons/fa6";
 import { DiJavascript1 } from "react-icons/di";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
 import { PiFileCssBold, PiFileHtmlBold  } from "react-icons/pi";
-import { TbFileTypeSql } from "react-icons/tb";
-import { RiBootstrapLine } from "react-icons/ri";
+import { TbBrandLaravel, TbBrandTypescript, TbFileTypeSql } from "react-icons/tb";
+import { RiBootstrapLine, RiTailwindCssLine } from "react-icons/ri";
 import { DiJqueryLogo } from "react-icons/di";
 import { BsFillTelephoneFill, BsMailbox2 } from "react-icons/bs";
 import { motion } from "framer-motion"
-import rwa from "./assets/Rwa.png"
+import mtx from "./assets/mtx.png"
 import gf from "./assets/gfimpports.png"
 import pf from "./assets/porfoliomae.png"
 import logo from './assets/logoMA.png'
+import { useContext } from "react";
+import { LightContext } from "./contexts/LightContext";
 
 
 function App() {
-  const [lightOn, setLightOn] = useState(true);
+  const { light } = useContext(LightContext);
   const { isOpen, onToggle } = useDisclosure();
   const [selectedValue, setSelectedValue] = React.useState('Whatsapp');
   const bodyElement = document.querySelector('body');
 
-  
-  useEffect(() => {
-      bodyElement.style.backgroundColor = lightOn ? "rgb(250, 250, 250)" : "#020114";
-  }, [lightOn]);
-
-  function setLightState() {
-    if(lightOn == true) {
-      setLightOn(!lightOn)
-    } else {
-      setLightOn(!lightOn);
-    }
-  }
-
   return (
     <div id="page">
-      <main>
-          <Header light={lightOn} logo={logo}/>
+      <main style={{ backgroundColor: light ? "white" : "#131111" }}>
+          <Header light={light} logo={logo}/>
           <div id="home" style={{position: "relative", marginTop: "100px"}}>
             <div className="container flex place-content-evenly items-center ">
               <section className="text-wrapper flex flex-col gap-3 justify-center items-center md:justify-start md:items-start">
                     <span
-                      style={{color: lightOn ? "black" : "white", "--time": "0.7s"}}
+                      style={{color: light ? "black" : "white", "--time": "0.7s"}}
                       className="text-xl font-medium"
                     >
                       Olá, me chamo
                     </span>
 
                     <span
-                      style={{color: lightOn ? "black" : "white", "--time": "0.8s"}}
+                      style={{color: light ? "black" : "white", "--time": "0.8s"}}
                       className="text-4xl md:text-6xl font-semibold"
                     >
                       Matheus <span className="secondary-color">Amaral</span>
@@ -126,19 +116,19 @@ function App() {
           </div>
 
           <div id="projects">
-            <h1 style={{ color: lightOn ? 'black' : 'white' }} className="text-3xl md:text-4xl">
+            <h1 style={{ color: light ? 'black' : 'white' }} className="text-3xl md:text-4xl">
               Meus <span className="secondary-color">Projetos</span>
             </h1>
 
             <div className="cards-container">
               <Card
-                imageUrl={rwa}  
-                title={"Rwa"} 
-                subTitle={"Suplementos"}
-                description={"Descubra qualidade e facilidade em nossa loja virtual. Em breve, com o upgrade para React JS, ofereceremos uma experiência ainda mais envolvente para sua jornada de saúde."}
-                light={lightOn}
-                deploy={"https://rwasuplementos.com/"}
-                github={"https://github.com/MatheuscAmaral/Rwa_Suplementos"}
+                imageUrl={mtx}  
+                title={"MTX"} 
+                subTitle={"E-commerce"}
+                description={"Bem-vindo à plataforma do MTX. Aqui reside uma experiência de usuário meticulosamente construída, alimentada por React com TypeScript, e moldada para tornar sua jornada de compras mais fluida e envolvente do que nunca."}
+                light={light}
+                deploy={"https://mtx-ecommerce.vercel.app"}
+                github={"https://github.com/MatheuscAmaral/mtx-ecommerce"}
                 invert={"no"}
                 />
 
@@ -147,7 +137,7 @@ function App() {
                 title={"Gf"}
                 subTitle={"Impports"} 
                 description={"Um e-commerce intuitivo para facilitar a aquisição de eletrônicos. Em constante evolução, prometemos uma experiência digital ainda mais sofisticada para sua jornada de descobertas tecnológicas."}
-                light={lightOn}
+                light={light}
                 deploy={"https://gfimpports.netlify.app/"}
                 github={"https://github.com/MatheuscAmaral/GFImpports"}
                 invert={"yes"}
@@ -158,7 +148,7 @@ function App() {
                 title={"Portfólio"}
                 subTitle={"Nutricional"} 
                 description={" Explore o portfólio nutricional, uma experiência online que visa inspirar hábitos saudáveis e oferecer informações valiosas sobre nutrição."}
-                light={lightOn}
+                light={light}
                 deploy={"https://fernardaamaralnutricionista.com/home.html"}
                 github={"https://github.com/MatheuscAmaral/portfolioFernandaAmaral"}
                 invert={"no"}
@@ -167,29 +157,41 @@ function App() {
           </div>
 
           <div id="carrer">
-            <h1 className="text-3xl md:text-4xl" style={{color: lightOn ? "black" : "white"}}>Minha <span className="secondary-color">Carreira</span></h1>
+            <h1 className="text-3xl md:text-4xl" style={{color: light ? "black" : "white"}}>Minha <span className="secondary-color">Carreira</span></h1>
 
-            {/* <Carrer/> */}
+            <Carrer/>
           </div>
 
           <div id="skills" style={{paddingBottom: "200px"}}>
-            <h1 className="text-3xl md:text-4xl" style={{color: lightOn ? "black" : "white"}}>Minhas <span className="secondary-color">Habilidades</span></h1>
+            <h1 className="text-3xl md:text-4xl" style={{color: light ? "black" : "white"}}>Minhas <span className="secondary-color">Habilidades</span></h1>
 
-            <div className="skills-container" style={{color: lightOn ? "black" : "white"}}>
-              <Skill
-                icon={<PiFileHtmlBold />}
-              />
-              <Skill
-                icon={<PiFileCssBold/>}
-              />
+            <div className="skills-container" style={{color: light ? "black" : "white"}}>
               <Skill
                 icon={<FaReact />}
+              />
+              <Skill
+                icon={<FaNode />}
               />
               <Skill
                 icon={<DiJavascript1/>}
               />
               <Skill
-                icon={<FaNode />}
+                icon={<TbBrandTypescript/>}
+              />
+              <Skill
+                icon={<FaPhp/>}
+              />
+              <Skill
+                icon={<TbBrandLaravel/>}
+              />
+              <Skill
+                icon={<RiTailwindCssLine/>}
+              />
+              <Skill
+                icon={<PiFileHtmlBold />}
+              />
+              <Skill
+                icon={<PiFileCssBold/>}
               />
               <Skill
                 icon={<DiJqueryLogo/>}
@@ -203,12 +205,15 @@ function App() {
               <Skill
                 icon={<TbFileTypeSql  />}
               />
+              <Skill
+                icon={<SiMysql />}
+              />
               
             </div>
           </div>
 
           <div id="talkMe" style={{paddingBottom: "200px"}}>
-            <h1 className="text-3xl md:text-4xl" style={{color: lightOn ? "black" : "white"}}>Fale <span className="secondary-color">comigo</span></h1>
+            <h1 className="text-3xl md:text-4xl" style={{color: light ? "black" : "white"}}>Fale <span className="secondary-color">comigo</span></h1>
 
             <div className='flex items-center flex-col gap-2'>
                 <div className='flex gap-2'>
@@ -234,7 +239,7 @@ function App() {
                     <SlideFade in={isOpen} offsetY='20px'>
                       <Box
                         p='0px'
-                        style={{color: lightOn ? "black" : "white"}}
+                        style={{color: light ? "black" : "white"}}
                         rounded='md'
                         fontSize='13px'
                       >
@@ -254,7 +259,7 @@ function App() {
                     <SlideFade in={isOpen} offsetY='20px'>
                       <Box
                         p='0px'
-                        style={{color: lightOn ? "black" : "white"}}
+                        style={{color: light ? "black" : "white"}}
                         rounded='md'
                         fontSize='13px'
                       >
@@ -274,7 +279,7 @@ function App() {
                     <SlideFade in={isOpen} offsetY='20px'>
                       <Box
                         p='0px'
-                        style={{color: lightOn ? "black" : "white"}}
+                        style={{color: light ? "black" : "white"}}
                         rounded='md'
                         fontSize='13px'
                       >
@@ -292,7 +297,7 @@ function App() {
       <footer>
           <Footer
             icon={<FaRegCopyright />}
-            light={lightOn}
+            light={light}
           />
       </footer>
     </div>
