@@ -59,6 +59,11 @@ body {
     border-radius: 25%;
 }
 
+#myPicture:hover {
+    border: 3px solid var(--secondary-color-hover);
+    transition: 0.3s;
+}
+
 #myPicture {
     animation: pulse 2.5s infinite ease;
 }
