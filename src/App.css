@@ -287,10 +287,6 @@ li > a {
 }
 
 @media screen and (min-width: 800px){
-    .content_talk {
-        margin-left: 300px;
-    }
-
     .skills-container {
         display: grid;
         grid-template-columns: repeat(6, minmax(100px, 1fr));

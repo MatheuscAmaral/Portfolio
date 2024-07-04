@@ -13,7 +13,7 @@ export default function Header({ logo }) {
 
   return (
     <header className='pt-10'>
-      <nav className="mx-auto flex max-w-8xl items-center justify-between px-5 lg:px-52" aria-label="Global">
+      <nav className="mx-auto flex max-w-8xl items-center justify-between px-5 xl:px-52" aria-label="Global">
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
             <img className="h-12 w-auto" src={logo} alt="Logo ma"/>
